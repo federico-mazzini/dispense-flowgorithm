@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="870" height="255" viewBox="0 0 870 255">
+<rect width="870" height="255" fill="#fff"/>
+<rect x="12" y="16" width="402" height="221" rx="9" fill="#f9fafb" stroke="#d6d9dd" stroke-width="2"/>
+<rect x="457" y="16" width="402" height="221" rx="9" fill="#f9fafb" stroke="#d6d9dd" stroke-width="2"/>
+<text x="213" y="63" font-family="Arial,Helvetica,sans-serif" fill="#244457" font-size="27" font-weight="bold" text-anchor="middle">Dichiarazione</text>
+<text x="658" y="63" font-family="Arial,Helvetica,sans-serif" fill="#244457" font-size="27" font-weight="bold" text-anchor="middle">Assegnazione</text>
+<rect x="75" y="92" width="276" height="75" rx="5" fill="#e7eef2" stroke="#8faebd" stroke-width="2"/>
+<rect x="520" y="92" width="276" height="75" rx="5" fill="#faf0e8" stroke="#ca9272" stroke-width="2"/>
+<text x="213" y="138" font-family="Arial,Helvetica,sans-serif" fill="#252b33" font-size="29" text-anchor="middle">prezzo</text>
+<text x="658" y="138" font-family="Arial,Helvetica,sans-serif" fill="#252b33" font-size="29" text-anchor="middle">prezzo = 20</text>
+<text x="213" y="202" font-family="Arial,Helvetica,sans-serif" fill="#47545e" font-size="20" text-anchor="middle">Nome della variabile</text>
+<text x="658" y="202" font-family="Arial,Helvetica,sans-serif" fill="#47545e" font-size="20" text-anchor="middle">Valore della variabile</text>
+</svg>
