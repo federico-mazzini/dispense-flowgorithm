@@ -16,7 +16,7 @@
   ],
 )
 #set text(font: "Linux Libertine O", size: 11pt, fill: ink, lang: "it")
-#set par(justify: true, leading: 0.58em, spacing: 0.66em)
+#set par(justify: false, leading: 0.84em, spacing: 0.95em)
 #set heading(numbering: none)
 #show strong: set text(fill: navy)
 #show heading.where(level: 1): set text(font: "Inter", size: 17.5pt, weight: "semibold", fill: rust)
@@ -25,7 +25,7 @@
 #show heading.where(level: 2): set block(above: 15pt, below: 8pt)
 #show heading.where(level: 3): set text(font: "Inter", size: 11.3pt, weight: "semibold", fill: navy)
 #show heading.where(level: 3): set block(above: 11pt, below: 7pt)
-#let nota(body) = block(width: 100%, above: 9pt, below: 10pt, inset: 9pt, fill: rgb("#f3f5f6"), stroke: (left: 2pt + navy), breakable: false, body)
+#let nota(body) = block(width: 100%, above: 12pt, below: 12pt, breakable: false, body)
 #let figura(path, larghezza, descrizione) = block(above: 7pt, below: 10pt, breakable: false)[
   #align(center)[#image(path, width: larghezza, alt: descrizione)]
 ]
