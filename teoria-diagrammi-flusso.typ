@@ -15,64 +15,95 @@
     )
   ],
 )
-#set text(font: "Linux Libertine O", size: 11pt, fill: ink, lang: "it")
+#set text(font: "Linux Libertine O", size: 11.5pt, fill: ink, lang: "it")
 #set par(justify: false, leading: 0.84em, spacing: 0.95em)
 #set heading(numbering: none)
 #show strong: set text(fill: navy)
-#show heading.where(level: 1): set text(font: "Inter", size: 17.5pt, weight: "semibold", fill: rust)
+#show heading.where(level: 1): set text(font: "Inter", size: 20pt, weight: "semibold", fill: rust)
 #show heading.where(level: 1): set block(above: 20pt, below: 11pt)
-#show heading.where(level: 2): set text(font: "Inter", size: 12.5pt, weight: "semibold", fill: navy)
+#show heading.where(level: 2): set text(font: "Inter", size: 15pt, weight: "semibold", fill: navy)
 #show heading.where(level: 2): set block(above: 15pt, below: 8pt)
-#show heading.where(level: 3): set text(font: "Inter", size: 11.3pt, weight: "semibold", fill: navy)
+#show heading.where(level: 3): set text(font: "Inter", size: 12pt, weight: "semibold", fill: navy)
 #show heading.where(level: 3): set block(above: 11pt, below: 7pt)
 #let nota(body) = block(width: 100%, above: 12pt, below: 12pt, breakable: false, body)
-#let figura(path, larghezza, descrizione) = block(above: 7pt, below: 10pt, breakable: false)[
+// La gerarchia delle pagine resta leggibile anche in scala di grigi.
+#show heading.where(level: 1): it => { it; v(5pt); line(length: 28mm, stroke: 1pt + rust); v(12pt, weak: true) }
+#show heading.where(level: 2): it => { v(17pt, weak: true); it; v(7pt, weak: true) }
+#show heading.where(level: 3): it => block(width: 100%, sticky: true, inset: (top: 9pt, bottom: 4pt), it)
+#show outline.entry.where(level: 1): it => block(width: 100%, inset: (y: 4pt), text(size: 12pt, it))
+#set list(spacing: 5pt)
+#set enum(spacing: 5pt)
+#show table.cell.where(y: 0): set text(font: "Inter", size: 9.5pt, weight: "semibold", fill: navy)
+#set table(inset: (x: 6pt, y: 7pt), stroke: (top: none, bottom: 0.5pt + faint, left: none, right: none))
+#let etichetta(t) = text(font: "Inter", weight: "semibold", size: 10.5pt, fill: rust, t)
+#let definizione(termine, body) = block(breakable: false)[
+  #line(length: 100%, stroke: 0.75pt + rust)
+  #v(5pt)
+  #etichetta(termine)
+  #v(4pt)
+  #body
+]
+#let confronto(a, b) = block(breakable: false)[
+  #grid(columns: (1fr, 1fr), column-gutter: 9mm, a, b)
+  #v(8pt)
+]
+#let fase(termine, body) = block(breakable: false)[
+  #v(6pt)
+  #line(length: 100%, stroke: 0.45pt + faint)
+  #v(6pt)
+  #grid(columns: (38mm, 1fr), column-gutter: 4mm, etichetta(termine), body)
+  #v(6pt)
+]
+#let richiamo(body) = block(breakable: false, width: 100%, inset: (left: 9pt),
+  above: 12pt, below: 10pt, stroke: (left: 1pt + rust), body)
+#let simbolo(immagine, spiegazione) = block(breakable: false, width: 100%)[
+  #v(5pt)
+  #grid(columns: (48mm, 1fr), column-gutter: 7mm, immagine, spiegazione)
+  #v(10pt)
+]
+#let didascalia(body) = align(center, text(size: 10pt, style: "italic", body))
+#let laboratorio(body) = block(breakable: false, width: 100%, inset: 15pt, stroke: 0.85pt + rust)[
+  #align(right)[#etichetta[Sperimenta in laboratorio]]
+  #v(6pt)
+  #body
+]
+#let figura(path, larghezza, descrizione) = block(width: 100%, above: 7pt, below: 10pt, breakable: false)[
   #align(center)[#image(path, width: larghezza, alt: descrizione)]
 ]
 #text(font: "Inter", size: 8.8pt, weight: "medium", fill: rust)[INFORMATICA / DISPENSA]
 #v(7pt)
-#text(font: "Inter", size: 25pt, weight: "semibold", fill: navy)[Programmi e diagrammi di flusso]
+#text(font: "Inter", size: 29pt, weight: "semibold", fill: navy)[Programmi e diagrammi di flusso]
 #v(6pt)
 #line(length: 39%, stroke: 1.4pt + rust)
 #v(15pt)
 
 
 
+#v(12pt)
 #outline(title: [Contenuti], depth: 1)
 #pagebreak()
 = Introduzione ai programmi e al software <cap1>
 
 == Hardware e software
 
-#nota[
-
-
-*HARDWARE*
-
+#confronto(
+  definizione([HARDWARE], [
 La parte *fisica* del dispositivo: ciò che possiamo toccare.
 
 Esempi: schermo, tastiera, mouse, processore.
-
-]
-
-#nota[
-
-
-*SOFTWARE*
-
+  ]),
+  definizione([SOFTWARE], [
 Parte NON fisica, tutto ciò che non si può toccare. Sono i programmi che permettono all’hardware di svolgere dei compiti.
 
 Esempi: browser, videogiochi, Excel, Word, Google Drive
+  ]),
+)
 
-]
-
-*Idea chiave:* hardware e software collaborano. L’hardware è la parte fissa e stabilisce come è fatto il computer o il telefono, il software è la parte che stabilisce il comportamento. Se si apre Word sul computer, il computer è una macchina che scrive documento. Se si apre un gioco, il computer è una macchina che permette di giocare.
-
-#nota[
+#richiamo[*Idea chiave:* hardware e software collaborano. L’hardware è la parte fissa e stabilisce come è fatto il computer o il telefono, il software è la parte che stabilisce il comportamento. Se si apre Word sul computer, il computer è una macchina che scrive documento. Se si apre un gioco, il computer è una macchina che permette di giocare.
 
 === Il software è costituito dai programmi
-
 ]
+#v(10pt)
 
 == Che cos’è un programma?
 
@@ -87,29 +118,21 @@ Le istruzioni vengono scritte usando un *linguaggio di programmazione*, seguendo
 
 ]
 
+#v(8pt)
 == Utente e programmatore
 
-#nota[
-
-
-*UTENTE*
-
+#confronto(
+  definizione([UTENTE], [
 Una persona che utilizza il programma per raggiungere un obiettivo.
 
 *Esempio:* studente che usa Word per scrivere appunti, persona che gioca a FIFA.
-
-]
-
-#nota[
-
-
-*PROGRAMMATORE*
-
+  ]),
+  definizione([PROGRAMMATORE], [
 Progetta e realizza il programma, scrivendo le istruzioni che il computer deve eseguire. Le istruzioni sono scritte in un linguaggio di programmazione, uno speciale linguaggio che il computer può capire.
 
 *Esempio:* persona che ha l’idea e crea un gioco online.
-
-]
+  ]),
+)
 
 #nota[
 
@@ -139,6 +162,7 @@ Un'interfaccia ben progettata è chiara e intuitiva, cioè permette all’utente
 ]
 
 #pagebreak()
+#laboratorio[
 == Scriviamo un programma con l’IA
 
 Un programma, in fondo, è *testo scritto in una forma che il computer può interpretare ed eseguire*. Non è un testo qualsiasi: deve rispettare le regole di un linguaggio di programmazione, un po' come una ricetta deve essere scritta in modo preciso per poter essere seguita.
@@ -148,38 +172,37 @@ Possiamo chiedere a un assistente come ChatGPT di scrivere questo testo al posto
 #nota[
 
 
-*Prompt*
+#etichetta[Prompt]
+#v(4pt)
 
 Crea un semplice videogioco didattico utilizzando i linguaggi HTML, CSS e JavaScript, tutto all’interno di un unico file HTML.
+
 Il gioco deve avere una mappa in cui un omino, controllato con le frecce della tastiera, deve muoversi e schivare dei mostri che si spostano autonomamente. Se un mostro tocca l’omino, la partita termina. Il giocatore guadagna punti sopravvivendo e può ricominciare la partita con un pulsante.
+
 Realizza una grafica colorata e intuitiva, con punteggio visibile e difficoltà crescente nel tempo. Il gioco deve funzionare direttamente nel browser, senza installare programmi o utilizzare librerie esterne.
 
 ]
 
 #nota[
-
-
-*1. Noi scriviamo una richiesta per l'IA*
-
+#etichetta[1. Noi scriviamo una richiesta per l'IA]
+#v(4pt)
 «Crea un piccolo gioco in cui un personaggio si muove con le frecce della tastiera e deve evitare degli ostacoli».
-
+#v(9pt)
 ]
 
 #nota[
-
-
-*2. L'IA genera il testo del programma*
-
+#etichetta[2. L'IA genera il testo del programma]
+#v(4pt)
 L'IA restituisce istruzioni scritte in un linguaggio che il computer può eseguire, per esempio HTML, CSS e JavaScript per un gioco che funziona nel browser.
-
+#v(9pt)
 ]
 
 #nota[
-
-
-*3. Il computer esegue il programma*
-
+#etichetta[3. Il computer esegue il programma]
+#v(4pt)
 Quando il testo è scritto correttamente e viene aperto nell'ambiente adatto, il computer interpreta le istruzioni e il gioco può funzionare.
+#v(9pt)
+]
 
 ]
 
@@ -190,58 +213,39 @@ Quando il testo è scritto correttamente e viene aperto nell'ambiente adatto, il
 
 Molti programmi possono essere descritti attraverso tre momenti: *ricevono dei dati, li elaborano e producono un risultato*.
 
-#nota[
-
-
-*INPUT → ELABORAZIONE → OUTPUT*
-
-*Dati in ingresso → Operazioni sui dati → Risultato in uscita*
-
+#block(width: 100%, above: 14pt, below: 15pt)[
+  #align(center)[
+    #etichetta[INPUT → ELABORAZIONE → OUTPUT]
+    #v(3pt)
+    *Dati in ingresso → Operazioni sui dati → Risultato in uscita*
+  ]
 ]
 
-#nota[
-
-
-*INPUT*
-
+#fase([INPUT], [
 *I dati in ingresso*
 
 Sono le informazioni che servono al programma per svolgere un compito.
 
 *Esempi:* una misura, un prezzo, due numeri inseriti da una persona.
+])
 
-]
-
-#nota[
-
-
-*ELABORAZIONE*
-
+#fase([ELABORAZIONE], [
 *Le operazioni sui dati*
 
 Sono i calcoli o le trasformazioni che il programma esegue sui dati ricevuti.
 
 *Esempi:* sommare, moltiplicare, confrontare, ordinare o cercare informazioni.
+])
 
-]
-
-#nota[
-
-
-*OUTPUT*
-
+#fase([OUTPUT], [
 *Il risultato in uscita*
 
 È l'informazione che il programma restituisce dopo l'elaborazione.
 
 *Esempi:* un'area calcolata, una media, un prezzo finale, un messaggio o un grafico.
+])
 
-]
-
-#nota[
-
-
-*Da ricordare:* l'input non deve necessariamente essere digitato da una persona. Un programma può ricevere dati anche da un sensore, da un file o da un altro programma.
+#richiamo[*Da ricordare:* l'input non deve necessariamente essere digitato da una persona. Un programma può ricevere dati anche da un sensore, da un file o da un altro programma.
 
 ]
 
@@ -275,52 +279,31 @@ Prima di leggere la soluzione, prova a rispondere:
 - Quale risultato deve mostrare?
 ]
 
-#nota[
-
-
-*INPUT*
-
+#fase([INPUT], [
 Lato del quadrato
 
 Esempio: 5 cm
+])
 
-]
-
-#nota[
-
-
-*ELABORAZIONE*
-
+#fase([ELABORAZIONE], [
 Area = Lato x Lato
 
 Esempio = 5cm x 5cm
+])
 
-]
-
-#nota[
-
-
-*OUTPUT*
-
+#fase([OUTPUT], [
 Area
 
 Esempio: 25 cm²
+])
 
-]
-
-#nota[
-
-
-*Attenzione:* il programma deve essere generale, non specifico su un esempio.
+#richiamo[*Attenzione:* il programma deve essere generale, non specifico su un esempio.
 Non creiamo un programma per calcolare l’area di un quadrato con lato 5cm.
 Creiamo un programma per calcolare l’area di un quadrato con lato di qualsiasi misura.
 
 ]
 
-#nota[
-
-
-*Attenzione:* l'output non è l'operazione che eseguiamo, ma il risultato che otteniamo.
+#richiamo[*Attenzione:* l'output non è l'operazione che eseguiamo, ma il risultato che otteniamo.
 
 ]
 
@@ -332,7 +315,7 @@ Creiamo un programma per calcolare l’area di un quadrato con lato di qualsiasi
 *Problema:* calcolare l'area conoscendo base e altezza.
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Fase],[Che cosa contiene?]),
 [*Input*],
 [Base = 5 cm; altezza = 3 cm.],
@@ -348,7 +331,7 @@ Creiamo un programma per calcolare l’area di un quadrato con lato di qualsiasi
 *Problema:* calcolare la media di due numeri.
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Fase],[Che cosa contiene?]),
 [*Input*],
 [I due numeri: 6 e 8.],
@@ -364,7 +347,7 @@ Creiamo un programma per calcolare l’area di un quadrato con lato di qualsiasi
 *Problema:* un prodotto costa *23 €* e ha uno sconto del *10%*. Qual è il prezzo finale?
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Fase],[Che cosa succede?]),
 [*Input*],
 [Prezzo iniziale: 23 €; sconto: 10%.],
@@ -382,45 +365,34 @@ Creiamo un programma per calcolare l’area di un quadrato con lato di qualsiasi
 Quando leggi un problema, fatti queste domande, nell'ordine.
 
 #nota[
-
-
-*0. PROBLEMA — Ho capito il problema?*
-
+#etichetta[0. PROBLEMA — Ho capito il problema?]
+#v(4pt)
 Ho capito quale problema devo risolvere? Riesco a fare degli esempi?
-
+#v(9pt)
 ]
 
 #nota[
-
-
-*1. INPUT — Che cosa conosco o devo chiedere?*
-
+#etichetta[1. INPUT — Che cosa conosco o devo chiedere?]
+#v(4pt)
 Quali dati sono necessari per risolvere il problema?
-
+#v(9pt)
 ]
 
 #nota[
-
-
-*2. ELABORAZIONE — Che cosa devo fare con quei dati?*
-
+#etichetta[2. ELABORAZIONE — Che cosa devo fare con quei dati?]
+#v(4pt)
 Quali operazioni, formule o confronti devo eseguire?
-
+#v(9pt)
 ]
 
 #nota[
-
-
-*3. OUTPUT — Che cosa devo ottenere?*
-
+#etichetta[3. OUTPUT — Che cosa devo ottenere?]
+#v(4pt)
 Quale risultato deve essere restituito o mostrato?
-
+#v(9pt)
 ]
 
-#nota[
-
-
-*Un piccolo trucco:* prova a raccontare il problema con questa frase:
+#richiamo[*Un piccolo trucco:* prova a raccontare il problema con questa frase:
 
 «Ricevo \_\_\_\_\_\_, eseguo \_\_\_\_\_\_ e ottengo \_\_\_\_\_\_».
 
@@ -443,30 +415,35 @@ Un *diagramma di flusso* rappresenta graficamente i passaggi necessari per risol
 
 === Inizio e Fine — forma ovale
 
-#figura("immagini/teoria-diagrammi-flusso/blocco_start_fine.svg", 65mm, "Diagramma: INIZIO / FINE; Forma ovale.")
-
+#simbolo([
+#figura("immagini/teoria-diagrammi-flusso/blocco_start_fine.svg", 48mm, "Diagramma: INIZIO / FINE; Forma ovale.")
+], [
 Il blocco *Start/Fine* indica dove comincia e dove termina il diagramma.
 
 - *INIZIO*: è il punto di partenza.
 - *FINE*: indica che il procedimento è terminato.
 
 *Importante:* un diagramma deve sempre avere un inizio e una fine.
+])
 
 === Input e Output — forma a parallelogramma
 
-#figura("immagini/teoria-diagrammi-flusso/blocco_input_output.svg", 65mm, "Diagramma: INPUT / OUTPUT; Forma: parallelogramma.")
-
+#simbolo([
+#figura("immagini/teoria-diagrammi-flusso/blocco_input_output.svg", 48mm, "Diagramma: INPUT / OUTPUT; Forma: parallelogramma.")
+], [
 Il parallelogramma rappresenta un'operazione di *ingresso o uscita dei dati*.
 
 - *Input*: il programma riceve o legge un dato. Esempio: chiedere all'utente la misura del lato.
 - *Output*: il programma comunica o mostra un risultato. Esempio: visualizzare l'area calcolata.
 
 *Importante:* i dati che sono usati poi nell’elaborazione, devono esistere nel blocco di input.
+])
 
 === Elaborazione — forma rettangolare
 
-#figura("immagini/teoria-diagrammi-flusso/blocco_elaborazione.svg", 65mm, "Diagramma: ELABORAZIONE; Forma: rettangolo.")
-
+#simbolo([
+#figura("immagini/teoria-diagrammi-flusso/blocco_elaborazione.svg", 48mm, "Diagramma: ELABORAZIONE; Forma: rettangolo.")
+], [
 Il rettangolo rappresenta un'*operazione eseguita sui dati*, per esempio un calcolo.
 
 Esempi:
@@ -474,6 +451,7 @@ Esempi:
 - calcolare l'area di un quadrato;
 - sommare due numeri;
 - calcolare il prezzo dopo uno sconto.
+])
 
 
 #pagebreak()
@@ -494,7 +472,7 @@ Riprendiamo il problema dell'area del quadrato: il programma legge la misura del
 == Testo o diagramma?
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Nel testo],[Nel diagramma di flusso]),
 [Scriviamo le fasi in una tabella o in un elenco.],
 [Usiamo blocchi con forme convenzionali.],
@@ -505,9 +483,7 @@ Riprendiamo il problema dell'area del quadrato: il programma legge la misura del
 )
 ]
 
-#nota[
-
-*Importante:* non sono due metodi diversi per risolvere il problema. Sono due modi per descrivere lo stesso ragionamento. Il diagramma di flusso rende visibile il percorso da seguire.
+#richiamo[*Importante:* non sono due metodi diversi per risolvere il problema. Sono due modi per descrivere lo stesso ragionamento. Il diagramma di flusso rende visibile il percorso da seguire.
 
 ]
 
@@ -530,7 +506,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 === 1. Ragioniamo sul problema
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Fase],[Descrizione]),
 [*Input*],
 [La misura del lato, per esempio 4 cm],
@@ -545,12 +521,9 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 #figura("immagini/teoria-diagrammi-flusso/diagramma-area-quadrato.svg", 100mm, "Diagramma: Area di un quadrato; INIZIO; Leggi lato; area = lato × lato; Mostra area; FINE; Le frecce indicano l'ordine dei passaggi..")
 
-Diagramma di flusso per calcolare l'area di un quadrato
+#didascalia[Diagramma di flusso per calcolare l'area di un quadrato]
 
-#nota[
-
-
-*Da ricordare:* il lato deve essere ricevuto prima di poter calcolare l'area. Il risultato viene mostrato solo dopo il calcolo.
+#richiamo[*Da ricordare:* il lato deve essere ricevuto prima di poter calcolare l'area. Il risultato viene mostrato solo dopo il calcolo.
 
 ]
 
@@ -563,7 +536,7 @@ Diagramma di flusso per calcolare l'area di un quadrato
 === 1. Ragioniamo sul problema
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Fase],[Descrizione]),
 [*Input*],
 [Due numeri, per esempio 7 e 5],
@@ -578,12 +551,9 @@ Diagramma di flusso per calcolare l'area di un quadrato
 
 #figura("immagini/teoria-diagrammi-flusso/diagramma-somma-due-numeri.svg", 100mm, "Diagramma: Somma di due numeri; INIZIO; Leggi numero1; Leggi numero2; somma = numero1 + numero2; Mostra somma; FINE; Prima si acquisiscono entrambi i numeri, poi si calcola la somma..")
 
-Diagramma di flusso per calcolare la somma di due numeri
+#didascalia[Diagramma di flusso per calcolare la somma di due numeri]
 
-#nota[
-
-
-*Da ricordare:* se un calcolo richiede due dati, entrambi devono essere acquisiti prima di eseguire l'operazione.
+#richiamo[*Da ricordare:* se un calcolo richiede due dati, entrambi devono essere acquisiti prima di eseguire l'operazione.
 
 ]
 
@@ -596,7 +566,7 @@ Diagramma di flusso per calcolare la somma di due numeri
 === 1. Ragioniamo sul problema
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Fase],[Descrizione]),
 [*Input*],
 [Prezzo iniziale = 23 €; percentuale di sconto = 10],
@@ -612,12 +582,9 @@ Diagramma di flusso per calcolare la somma di due numeri
 === 2. Scriviamo il diagramma
 
 #figura("immagini/teoria-diagrammi-flusso/811b4a36-f356-4fe2-8818-45ca1ea99374.png", 100mm, "Inizio; leggi prezzo; sconto = prezzo × 10 / 100; prezzo_finale = prezzo − sconto; mostra prezzo_finale; fine. Questo diagramma applica uno sconto fisso del 10%.")
-#nota[*Nota sul diagramma:* qui la percentuale è fissata al 10%. Per il caso generale descritto nel testo occorre leggere anche la percentuale e usarla al posto di 10 nel calcolo.]
+#richiamo[*Nota sul diagramma:* qui la percentuale è fissata al 10%. Per il caso generale descritto nel testo occorre leggere anche la percentuale e usarla al posto di 10 nel calcolo.]
 
-#nota[
-
-
-*Da ricordare:* il prezzo e la percentuale sono entrambi input. Se il prezzo è 23 € e la percentuale è 10, lo sconto è 2,30 € e il prezzo finale è 20,70 €.
+#richiamo[*Da ricordare:* il prezzo e la percentuale sono entrambi input. Se il prezzo è 23 € e la percentuale è 10, lo sconto è 2,30 € e il prezzo finale è 20,70 €.
 
 I blocchi di elaborazione sono 2, perchè sono necessari due calcoli.
 
@@ -645,21 +612,25 @@ Quando scrivi un diagramma, *il nome dato a un'informazione deve rimanere uguale
 
 === Esempio corretto — Area del quadrato
 
+#block(width: 100%, inset: (left: 10pt, y: 5pt), stroke: (left: 0.65pt + faint))[
 ```
 Input: lato
 Elaborazione: area = lato × lato
 Output: mostra area
 ```
+]
 
 Il nome `lato` è lo stesso nell'input e nel calcolo. Il risultato si chiama `area` nell'elaborazione e viene mostrato come `area` nell'output.
 
 === Esempio da evitare
 
+#block(width: 100%, inset: (left: 10pt, y: 5pt), stroke: (left: 0.65pt + faint))[
 ```
 Input: lato
 Elaborazione: superficie = lato × lato
 Output: mostra area
 ```
+]
 
 Qui il risultato viene chiamato prima `superficie` e poi `area`: non è chiaro se si stia parlando della stessa cosa.
 #pagebreak()
@@ -692,7 +663,7 @@ Una *condizione* è una domanda precisa che il programma controlla. La risposta 
 - *NO* — la condizione è falsa.
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Condizione nel rombo],[La domanda che ci poniamo]),
 [`numero > 0?`],
 [Il numero è maggiore di zero?],
@@ -712,10 +683,7 @@ Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. S
 - `eta > 18` significa *maggiore di 18*: il valore 18 non è incluso.
 - `eta >= 18` significa *maggiore o uguale a 18*: il valore 18 è incluso.
 
-#nota[
-
-
-*Attenzione:* la risposta alla condizione non è un numero o una frase libera: è sempre *SÌ* oppure *NO*. Il programma userà questa risposta per scegliere il percorso.
+#richiamo[*Attenzione:* la risposta alla condizione non è un numero o una frase libera: è sempre *SÌ* oppure *NO*. Il programma userà questa risposta per scegliere il percorso.
 
 ]
 
@@ -729,7 +697,7 @@ Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. S
 === Ragioniamo sul problema
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Fase],[Descrizione]),
 [*Input*],
 [Un numero, chiamato `numero`],
@@ -746,12 +714,9 @@ Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. S
 
 #figura("immagini/teoria-diagrammi-flusso/diagramma-numero-positivo-con-input.svg", 100mm, "Diagramma: INIZIO; Leggi numero; numero > 0?; SÌ; NO; Mostra “Il numero è positivo”; Mostra “Il numero non è positivo”; FINE.")
 
-Diagramma di flusso: numero positivo
+#didascalia[Diagramma di flusso: numero positivo]
 
-#nota[
-
-
-*Da ricordare:* zero non è un numero positivo. Se `numero = 0`, la condizione `numero > 0` è falsa e si segue il ramo *NO*.
+#richiamo[*Da ricordare:* zero non è un numero positivo. Se `numero = 0`, la condizione `numero > 0` è falsa e si segue il ramo *NO*.
 
 ]
 
@@ -763,7 +728,7 @@ Diagramma di flusso: numero positivo
 === Ragioniamo sul problema
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Fase],[Descrizione]),
 [*Input*],
 [Età, chiamata `eta`],
@@ -780,12 +745,12 @@ Diagramma di flusso: numero positivo
 
 #figura("immagini/teoria-diagrammi-flusso/diagramma-eta-maggiorenne-con-input.svg", 100mm, "Diagramma: INIZIO; Leggi eta; eta >= 18?; SÌ; NO; Mostra “Puoi entrare”; Mostra “Non puoi entrare”; FINE.")
 
-Diagramma di flusso: età almeno 18 anni
+#didascalia[Diagramma di flusso: età almeno 18 anni]
 
 === Proviamo con alcuni valori
 
 #block(breakable: false)[
-#table(columns: (1fr, 1fr, 1fr, 1fr), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (1fr, 1fr, 1fr, 1fr),
  table.header([Valore di `eta`],[La condizione `eta >= 18?`],[Percorso],[Messaggio]),
 [20],
 [Vera],
@@ -802,10 +767,7 @@ Diagramma di flusso: età almeno 18 anni
 )
 ]
 
-#nota[
-
-
-*Attenzione al simbolo:* `>=` significa «maggiore o uguale». Per questo motivo, anche 18 soddisfa la condizione.
+#richiamo[*Attenzione al simbolo:* `>=` significa «maggiore o uguale». Per questo motivo, anche 18 soddisfa la condizione.
 
 ]
 
@@ -817,7 +779,7 @@ Diagramma di flusso: età almeno 18 anni
 === Ragioniamo sul problema
 
 #block(breakable: false)[
-#table(columns: (30%, 70%), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (30%, 70%),
  table.header([Fase],[Descrizione]),
 [*Input*],
 [Due numeri: `a` e `b`],
@@ -852,7 +814,7 @@ Per questo usiamo una seconda selezione nel percorso NO della prima:
 === Proviamo con alcuni valori
 
 #block(breakable: false)[
-#table(columns: (1fr, 1fr, 1fr, 1fr, 1fr), inset: 6pt, stroke: 0.35pt + faint,
+#table(columns: (1fr, 1fr, 1fr, 1fr, 1fr),
  table.header([`a`],[`b`],[Prima condizione `a > b?`],[Seconda condizione, se serve],[Risultato]),
 [9],
 [4],
