@@ -33,13 +33,13 @@ L'artifact viene conservato per 90 giorni (o meno, se le impostazioni del reposi
 
 ## Compilare in locale (opzionale)
 
-Installare [Typst 0.15.1](https://github.com/typst/typst/releases/tag/v0.15.1) e i font *Linux Libertine* e *Inter*, poi eseguire dalla cartella principale del progetto:
+Installare [Typst 0.15.1](https://github.com/typst/typst/releases/tag/v0.15.1) e i font *Linux Libertine O* e *Inter*, poi eseguire dalla cartella principale del progetto:
 
 ```bash
 typst compile flowgorithm.typ flowgorithm.pdf
 ```
 
-Per verificare i font disponibili usare `typst fonts`. Se i font sono in una cartella locale, aggiungere `--font-path /percorso/font` al comando di compilazione. Per aggiornare automaticamente il PDF durante le modifiche usare `typst watch flowgorithm.typ flowgorithm.pdf`. Il PDF locale è escluso da Git.
+La famiglia serif deve comparire esattamente come `Linux Libertine O` (alcune distribuzioni dei font usano nomi diversi). Per verificare i font disponibili usare `typst fonts`. Se i font sono in una cartella locale, aggiungere `--font-path /percorso/font` al comando di compilazione. Per aggiornare automaticamente il PDF durante le modifiche usare `typst watch flowgorithm.typ flowgorithm.pdf`. Il PDF locale è escluso da Git.
 
 Su Ubuntu i font si installano con `sudo apt-get install fonts-linuxlibertine fonts-inter fonts-liberation` (Liberation serve anche ai testi nei diagrammi SVG). Su macOS e Windows installare le stesse famiglie prima di compilare.
 

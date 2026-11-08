@@ -15,7 +15,7 @@
     )
   ],
 )
-#set text(font: "Linux Libertine", size: 11pt, fill: ink, lang: "it")
+#set text(font: "Linux Libertine O", size: 11pt, fill: ink, lang: "it")
 #set par(justify: true, leading: 0.58em, spacing: 0.66em)
 #set heading(numbering: none)
 #show strong: set text(fill: navy)
