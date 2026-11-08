@@ -59,7 +59,7 @@ Nei diagrammi di flusso abbiamo già rappresentato programmi attraverso figure g
 Quando si crea un programma sono già presenti *Inizio* e *Fine*. Le istruzioni si inseriscono tra questi due blocchi facendo clic sulla freccia di collegamento: compare un menu per scegliere il blocco da aggiungere.
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_17.53.55.jpg", 118mm)
+#figura("immagini/Screenshot_2026-11-05_alle_17.53.55.jpg", 94mm)
 
 
 == Lettura (Input)
@@ -71,7 +71,7 @@ Permette al programma di *ricevere un dato dall'utente*, normalmente dalla tasti
 È il blocco di input già visto nei diagrammi di flusso. Attenzione: per leggere qualsiasi dato è sempre necessario utilizzare prima un blocco di dichiarazione (vedi sotto)
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_18.00.24.jpg", 127mm)
+#figura("immagini/Screenshot_2026-11-05_alle_18.00.24.jpg", 102mm)
 
 
 == Scrittura (Output)
@@ -82,7 +82,7 @@ Permette al programma di *ricevere un dato dall'utente*, normalmente dalla tasti
 Permette di *mostrare informazioni sullo schermo*: messaggi, numeri, valori di variabili o risultati di calcoli. Per esempio, può visualizzare `"Benvenuto!"` oppure il prezzo finale. Corrisponde al blocco di output.
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_18.00.45.jpg", 128mm)
+#figura("immagini/Screenshot_2026-11-05_alle_18.00.45.jpg", 102mm)
 
 
 == Dichiarazione (Declare)
@@ -93,7 +93,7 @@ Permette di *mostrare informazioni sullo schermo*: messaggi, numeri, valori di v
 Serve a *creare un dato di input o di ouput* (che da qui in avanti chiameremo *variabile*), indicando il suo nome e il tipo di dato che conterrà. Per esempio, se vogliamo creare un programma che somma due numeri, dovremo creare due variabili, una per ogni numero. È una novità rispetto ai diagrammi di flusso realizzati finora. (Approfondimento nelle sezioni successive)
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_17.53.21.jpg", 128mm)
+#figura("immagini/Screenshot_2026-11-05_alle_17.53.21.jpg", 102mm)
 
 
 == Assegnazione (Assign)
@@ -104,7 +104,7 @@ Serve a *creare un dato di input o di ouput* (che da qui in avanti chiameremo *v
 Permette di *inserire o modificare il valore di un dato* (variabile). Per esempio, `prezzo = 20` memorizza il numero 20 nella variabile `prezzo`. È il blocco di elaborazione visto nei diagrammi di flusso.
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_18.00.56.jpg", 128mm)
+#figura("immagini/Screenshot_2026-11-05_alle_18.00.56.jpg", 102mm)
 
 
 == Condizione (If)
@@ -122,14 +122,14 @@ Per ora non consideriamo altri blocchi.
 In flowgorithm, a differenza dei diagrammi di flusso visti finora, non ci limiteremo a scrivere i programmi: potremo anche provarli. Una volta scritto il diagramma, premendo sul simbolo del play verde è possibile provare (*eseguire*) il programma. 
 
 
-#figura("immagini/1cab330e-70e2-45be-9394-f1b9700cfe66.png", 139mm)
+#figura("immagini/1cab330e-70e2-45be-9394-f1b9700cfe66.png", 111mm)
 
 Eseguire il programma ci permetterà di capire se abbiamo scritto il programma corretto e non abbiamo fatto errori. La finestra che ci si apre permette a noi (gli utenti) di comunicare gli input (sulla destra i messaggi che scriviamo noi) e al computer di comunicare gli output (sulla destra i messaggi del computer. 
 
 Questo semplice programma chiede all’utente il prezzo di un prodotto e comunica il prezzo finale aggiungendo 5 euro di spedizione. *Attenzione: questo non è il programma, è la sua esecuzione!*
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_18.06.24.jpg", 128mm)
+#figura("immagini/Screenshot_2026-11-05_alle_18.06.24.jpg", 102mm)
 
 
 = 4. Le variabili: conservare informazioni
@@ -150,18 +150,18 @@ Dichiarare una variabile significa dire al computer che esiste un dato e che ha 
 Qui sotto la schermata di dichiarazione di una variabile, in cui stiamo dicendo che esiste una variabile (un dato) chiamato “prezzo”. 
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_17.53.21.jpg", 128mm)
+#figura("immagini/Screenshot_2026-11-05_alle_17.53.21.jpg", 102mm)
 
 Assegnare una variabile significa dargli un valore. Sotto è riportata la schermata in cui è possibile dare un valore a una variabile. A sinistra scriviamo il nome della variabile, a destra il suo valore. 
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_18.00.56.jpg", 128mm)
+#figura("immagini/Screenshot_2026-11-05_alle_18.00.56.jpg", 102mm)
 
 
 === Dichiarazione e assegnazione sono due istruzioni completamente diverse, ma servono entrambe!
 
 
-#figura("immagini/dichiarazione_assegnazione.svg", 135mm)
+#figura("immagini/dichiarazione_assegnazione.svg", 108mm)
 
 
 == 4.2 Il tipo di una variabile
@@ -169,7 +169,7 @@ Assegnare una variabile significa dargli un valore. Sotto è riportata la scherm
 Quando dichiariamo una variabile, oltre al nome dobbiamo scegliere anche il suo *tipo*. Questo serve al computer per sapere quali valori può contenere. Per esempio, se dobbiamo conservare un'età useremo un numero, mentre per conservare il nome di una persona useremo un testo.
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_17.53.21.jpg", 119mm)
+#figura("immagini/Screenshot_2026-11-05_alle_17.53.21.jpg", 95mm)
 
 Nella schermata sopra è possibile scegliere il tipo della variabile. I principali tipi sono quattro:
 
