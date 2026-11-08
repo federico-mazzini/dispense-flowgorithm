@@ -29,7 +29,7 @@ jobs:
       - name: Compila la dispensa
         run: |
           typst compile flowgorithm.typ flowgorithm.pdf
-          typst compile diagrammi-flusso.typ diagrammi-flusso.pdf
+          typst compile "esercizi diagrammi flusso.typ" "esercizi diagrammi flusso.pdf"
           typst compile --pdf-standard ua-1 teoria-diagrammi-flusso.typ teoria-diagrammi-flusso.pdf
       - name: Pubblica il PDF
         uses: actions/upload-artifact@v4
@@ -42,7 +42,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: dispense-diagrammi-flusso
-          path: diagrammi-flusso.pdf
+          path: esercizi diagrammi flusso.pdf
           if-no-files-found: error
           retention-days: 90
       - name: Pubblica il PDF di teoria

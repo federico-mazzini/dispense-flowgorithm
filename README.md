@@ -55,15 +55,15 @@ Il repository è pubblico per facilitare la condivisione e la consultazione del 
 
 ## Diagrammi di flusso
 
-`diagrammi-flusso.typ` contiene la dispensa precedente a Flowgorithm: cinque fasi di esercizi e cinque diagrammi da eseguire. Le immagini originali sono in `immagini/diagrammi-flusso/`.
+`esercizi diagrammi flusso.typ` contiene la dispensa precedente a Flowgorithm: cinque fasi di esercizi e cinque diagrammi da eseguire. Le immagini originali sono in `immagini/diagrammi-flusso/`.
 
 Per compilarla con gli stessi font:
 
 ```bash
-typst compile diagrammi-flusso.typ diagrammi-flusso.pdf
+typst compile "esercizi diagrammi flusso.typ" "esercizi diagrammi flusso.pdf"
 ```
 
-Il workflow esistente, attivato con `[pdf]` o manualmente, genera entrambi i documenti. Per questa dispensa scaricare l'artifact **dispense-diagrammi-flusso**, che contiene `diagrammi-flusso.pdf`.
+Il workflow esistente, attivato con `[pdf]` o manualmente, genera entrambi i documenti. Per questa dispensa scaricare l'artifact **dispense-diagrammi-flusso**, che contiene `esercizi diagrammi flusso.pdf`.
 
 Il materiale fornito elenca anche una Fase 7 sui cicli semplici, ma il relativo file non è incluso nell'esportazione: la sezione non è presente in questa versione.
 

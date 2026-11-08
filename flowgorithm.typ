@@ -18,6 +18,8 @@
 #set text(font: "Linux Libertine O", size: 11pt, fill: ink, lang: "it")
 #set par(justify: true, leading: 0.58em, spacing: 0.66em)
 #set heading(numbering: none)
+#set list(indent: 5mm, body-indent: 3mm)
+#set enum(indent: 5mm, body-indent: 3mm)
 #show strong: set text(fill: navy)
 #show heading.where(level: 1): it => block(above: 20pt, below: 11pt, breakable: false)[
   #text(font: "Inter", size: 17.5pt, weight: "semibold", fill: rust)[#it.body]

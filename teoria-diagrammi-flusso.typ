@@ -17,7 +17,7 @@
 )
 #set text(font: "Linux Libertine O", size: 11.5pt, fill: ink, lang: "it")
 #set par(justify: false, leading: 0.84em, spacing: 0.95em)
-#set heading(numbering: none)
+#set heading(numbering: "1.1")
 #show strong: set text(fill: navy)
 #show heading.where(level: 1): set text(font: "Inter", size: 20pt, weight: "semibold", fill: rust)
 #show heading.where(level: 1): set block(above: 20pt, below: 11pt)
@@ -31,8 +31,8 @@
 #show heading.where(level: 2): it => { v(17pt, weak: true); it; v(7pt, weak: true) }
 #show heading.where(level: 3): it => block(width: 100%, sticky: true, inset: (top: 9pt, bottom: 4pt), it)
 #show outline.entry.where(level: 1): it => block(width: 100%, inset: (y: 4pt), text(size: 12pt, it))
-#set list(spacing: 5pt)
-#set enum(spacing: 5pt)
+#set list(indent: 5mm, body-indent: 3mm, spacing: 5pt)
+#set enum(indent: 5mm, body-indent: 3mm, spacing: 5pt)
 #show table.cell.where(y: 0): set text(font: "Inter", size: 9.5pt, weight: "semibold", fill: navy)
 #set table(inset: (x: 6pt, y: 7pt), stroke: (top: none, bottom: 0.5pt + faint, left: none, right: none))
 #let etichetta(t) = text(font: "Inter", weight: "semibold", size: 10.5pt, fill: rust, t)
@@ -207,6 +207,141 @@ Quando il testo è scritto correttamente e viene aperto nell'ambiente adatto, il
 ]
 
 #pagebreak()
+= Algoritmi <algoritmi>
+
+== Che cos'è un algoritmo?
+
+Un *algoritmo* è una sequenza ordinata e precisa di istruzioni che permette di risolvere un problema o svolgere un compito.
+
+Possiamo pensarlo come una ricetta: per ottenere il risultato desiderato dobbiamo seguire passaggi chiari, nell'ordine giusto.
+
+#nota[
+
+*Esempio quotidiano: preparare una merenda*
+
++ Prendere due fette di pane.
++ Spalmare la marmellata.
++ Unire le fette.
++ Mettere la merenda su un piatto.
+
+Se le istruzioni sono chiare e vengono eseguite nell'ordine previsto, sappiamo che cosa fare.
+
+]
+
+== Prima di scrivere l'algoritmo: capire il problema
+
+Prima di decidere i passaggi, rispondiamo a tre domande.
+
+#fase([Obiettivo], [
+Che cosa dobbiamo ottenere?
+])
+
+#fase([Dati in ingresso], [
+Quali informazioni ci servono?
+])
+
+#fase([Risultato], [
+Che cosa dobbiamo produrre o mostrare?
+])
+
+*Esempio: calcolare il prezzo scontato di un prodotto*
+
+- Obiettivo: calcolare quanto si paga dopo lo sconto.
+- Dati in ingresso: prezzo iniziale e percentuale di sconto.
+- Risultato: prezzo finale.
+
+#pagebreak()
+== Un algoritmo, passo dopo passo
+
+#nota[
+
+*Problema: calcolare il prezzo scontato*
+
++ Leggere il prezzo iniziale.
++ Leggere la percentuale di sconto.
++ Calcolare l'importo dello sconto: prezzo iniziale × percentuale ÷ 100.
++ Sottrarre l'importo dello sconto dal prezzo iniziale.
++ Mostrare il prezzo finale.
+]
+
+*Proviamolo con dei dati:* prezzo iniziale = 50 €; sconto = 10%.
+
+- Importo dello sconto: 50 × 10 ÷ 100 = 5 €
+- Prezzo finale: 50 − 5 = 45 €
+
+L'algoritmo non è legato a questi numeri: può essere riutilizzato anche con altri prezzi e percentuali.
+
+== Le caratteristiche di un buon algoritmo
+
+#block(breakable: false)[
+#table(columns: (26%, 37%, 37%), table.header([Caratteristica],[Che cosa significa],[Esempio]),
+[*Chiaro e non ambiguo*],
+[Ogni istruzione deve avere un significato preciso.],
+[«Sottrai 5 dal prezzo» è più chiaro di «fai lo sconto».],
+[*Ordinato*],
+[I passaggi devono essere disposti nell'ordine corretto.],
+[Prima calcolo lo sconto, poi lo sottraggo al prezzo.],
+[*Finito*],
+[Deve arrivare alla conclusione dopo un numero finito di passaggi.],
+[Dopo aver mostrato il prezzo finale, il compito termina.],
+[*Generale*],
+[Deve funzionare per tutti i casi previsti dal problema, non soltanto per un esempio.],
+[Deve funzionare sia con 50 € sia con 80 €.],
+[*Corretto*],
+[Deve produrre il risultato atteso quando si seguono le istruzioni con dati validi.],
+[Con 50 € e sconto del 10%, deve ottenere 45 €.]
+)
+]
+
+#pagebreak()
+== Come possiamo rappresentare un algoritmo?
+
+Un algoritmo può essere descritto in modi diversi:
+
+- *A parole:* spieghiamo i passaggi con frasi semplici.
+- *Con un diagramma di flusso:* rappresentiamo i passaggi con blocchi collegati da frecce.
+- *Con un linguaggio di programmazione:* scriviamo istruzioni che il computer può interpretare o eseguire.
+
+== Controllare l’algoritmo
+
+Prima di considerare concluso un algoritmo, facciamo una prova manuale: seguiamo ogni passaggio usando dati concreti e verifichiamo che cosa succede.
+
+*Esempio: sommare due numeri*
+
+#block(breakable: false)[
+#table(columns: (60%, 40%), table.header([Passaggio],[Valore o azione]),
+[1. Leggi il primo numero],
+[7],
+[2. Leggi il secondo numero],
+[4],
+[3. Calcola la somma],
+[7 + 4 = 11],
+[4. Mostra il risultato],
+[11]
+)
+]
+
+== Ripasso
+
+- Un algoritmo è una sequenza ordinata e precisa di istruzioni.
+- Prima di costruirlo, individuiamo obiettivo, dati in ingresso e risultato.
+- Un buon algoritmo deve essere chiaro, ordinato, finito, generale e corretto.
+- Possiamo rappresentarlo con parole, diagrammi di flusso o un linguaggio di programmazione.
+- Per controllarlo, seguiamo i passaggi con dati di prova.
+
+== Verifica se hai capito
+
++ Che cos'è un algoritmo?
+
++ Perché un algoritmo deve essere generale?
+
++ Nel problema del prezzo scontato, quali sono i dati in ingresso?
+
++ Qual è la differenza tra algoritmo e programma?
+
++ Come possiamo verificare un algoritmo?
+
+#pagebreak()
 = Input, elaborazione e output <cap2>
 
 == Come funziona un programma?
@@ -360,7 +495,7 @@ Creiamo un programma per calcolare l’area di un quadrato con lato di qualsiasi
 
 
 #pagebreak()
-== 3. Come riconoscere le tre fasi
+== Come riconoscere le tre fasi
 
 Quando leggi un problema, fatti queste domande, nell'ordine.
 
@@ -503,7 +638,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 *Problema:* ricevere la misura del lato di un quadrato, calcolare l'area e mostrare il risultato.
 
-=== 1. Ragioniamo sul problema
+=== Ragioniamo sul problema
 
 #block(breakable: false)[
 #table(columns: (30%, 70%),
@@ -517,7 +652,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 )
 ]
 
-=== 2. Scriviamo il diagramma
+=== Scriviamo il diagramma
 
 #figura("immagini/teoria-diagrammi-flusso/diagramma-area-quadrato.svg", 100mm, "Diagramma: Area di un quadrato; INIZIO; Leggi lato; area = lato × lato; Mostra area; FINE; Le frecce indicano l'ordine dei passaggi..")
 
@@ -533,7 +668,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 *Problema:* chiedere due numeri, calcolare la loro somma e visualizzare il risultato.
 
-=== 1. Ragioniamo sul problema
+=== Ragioniamo sul problema
 
 #block(breakable: false)[
 #table(columns: (30%, 70%),
@@ -547,7 +682,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 )
 ]
 
-=== 2. Scriviamo il diagramma
+=== Scriviamo il diagramma
 
 #figura("immagini/teoria-diagrammi-flusso/diagramma-somma-due-numeri.svg", 100mm, "Diagramma: Somma di due numeri; INIZIO; Leggi numero1; Leggi numero2; somma = numero1 + numero2; Mostra somma; FINE; Prima si acquisiscono entrambi i numeri, poi si calcola la somma..")
 
@@ -563,7 +698,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 *Problema:* un prodotto ha un prezzo iniziale. Il programma chiede anche la percentuale di sconto, calcola lo sconto e mostra il prezzo finale.
 
-=== 1. Ragioniamo sul problema
+=== Ragioniamo sul problema
 
 #block(breakable: false)[
 #table(columns: (30%, 70%),
@@ -579,7 +714,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 )
 ]
 
-=== 2. Scriviamo il diagramma
+=== Scriviamo il diagramma
 
 #figura("immagini/teoria-diagrammi-flusso/811b4a36-f356-4fe2-8818-45ca1ea99374.png", 100mm, "Inizio; leggi prezzo; sconto = prezzo × 10 / 100; prezzo_finale = prezzo − sconto; mostra prezzo_finale; fine. Questo diagramma applica uno sconto fisso del 10%.")
 #richiamo[*Nota sul diagramma:* qui la percentuale è fissata al 10%. Per il caso generale descritto nel testo occorre leggere anche la percentuale e usarla al posto di 10 nel calcolo.]
