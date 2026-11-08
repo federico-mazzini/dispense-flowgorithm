@@ -27,11 +27,20 @@ jobs:
           sudo apt-get update
           sudo apt-get install --no-install-recommends -y fonts-linuxlibertine fonts-inter fonts-liberation
       - name: Compila la dispensa
-        run: typst compile flowgorithm.typ flowgorithm.pdf
+        run: |
+          typst compile flowgorithm.typ flowgorithm.pdf
+          typst compile diagrammi-flusso.typ diagrammi-flusso.pdf
       - name: Pubblica il PDF
         uses: actions/upload-artifact@v4
         with:
           name: dispense-flowgorithm
           path: flowgorithm.pdf
+          if-no-files-found: error
+          retention-days: 90
+      - name: Pubblica il PDF sui diagrammi di flusso
+        uses: actions/upload-artifact@v4
+        with:
+          name: dispense-diagrammi-flusso
+          path: diagrammi-flusso.pdf
           if-no-files-found: error
           retention-days: 90
