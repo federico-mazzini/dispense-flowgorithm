@@ -15,7 +15,7 @@
     )
   ],
 )
-#set text(font: "Linux Libertine O", size: 11pt, fill: ink, lang: "it")
+#set text(font: "Linux Libertine", size: 11pt, fill: ink, lang: "it")
 #set par(justify: true, leading: 0.58em, spacing: 0.66em)
 #set heading(numbering: none)
 #show strong: set text(fill: navy)
@@ -150,12 +150,12 @@ Dichiarare una variabile significa dire al computer che esiste un dato e che ha 
 Qui sotto la schermata di dichiarazione di una variabile, in cui stiamo dicendo che esiste una variabile (un dato) chiamato “prezzo”. 
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_17.53.21 1.jpg", 128mm)
+#figura("immagini/Screenshot_2026-11-05_alle_17.53.21.jpg", 128mm)
 
 Assegnare una variabile significa dargli un valore. Sotto è riportata la schermata in cui è possibile dare un valore a una variabile. A sinistra scriviamo il nome della variabile, a destra il suo valore. 
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_18.00.56 1.jpg", 128mm)
+#figura("immagini/Screenshot_2026-11-05_alle_18.00.56.jpg", 128mm)
 
 
 === Dichiarazione e assegnazione sono due istruzioni completamente diverse, ma servono entrambe!
@@ -169,7 +169,7 @@ Assegnare una variabile significa dargli un valore. Sotto è riportata la scherm
 Quando dichiariamo una variabile, oltre al nome dobbiamo scegliere anche il suo *tipo*. Questo serve al computer per sapere quali valori può contenere. Per esempio, se dobbiamo conservare un'età useremo un numero, mentre per conservare il nome di una persona useremo un testo.
 
 
-#figura("immagini/Screenshot_2026-11-05_alle_17.53.21 2.jpg", 119mm)
+#figura("immagini/Screenshot_2026-11-05_alle_17.53.21.jpg", 119mm)
 
 Nella schermata sopra è possibile scegliere il tipo della variabile. I principali tipi sono quattro:
 

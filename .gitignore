@@ -1,0 +1,12 @@
+# Output locali
+/flowgorithm.pdf
+/output/
+/tmp/
+
+# File temporanei e di sistema
+.DS_Store
+._*
+*.tmp
+*.swp
+*.swo
+*~

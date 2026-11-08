@@ -1,0 +1,37 @@
+name: Genera PDF Flowgorithm
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  genera-pdf:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[pdf]')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Scarica i sorgenti
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Installa Typst
+        uses: typst-community/setup-typst@v5
+        with:
+          typst-version: '0.15.1'
+      - name: Installa i font
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y fonts-linuxlibertine fonts-inter fonts-liberation
+      - name: Compila la dispensa
+        run: typst compile flowgorithm.typ flowgorithm.pdf
+      - name: Pubblica il PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: dispense-flowgorithm
+          path: flowgorithm.pdf
+          if-no-files-found: error
+          retention-days: 90
