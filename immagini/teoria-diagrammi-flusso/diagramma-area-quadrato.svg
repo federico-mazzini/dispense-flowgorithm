@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="760" viewBox="0 0 800 760">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#475569"/></marker></defs>
+<rect width="800" height="760" rx="24" fill="#ffffff"/>
+<text x="400" y="48" font-family="Arial,sans-serif" font-size="27" font-weight="700" text-anchor="middle" fill="#1e293b">Area di un quadrato</text>
+<rect x="285" y="76" width="230" height="68" rx="34" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+<text x="400" y="118" font-family="Arial,sans-serif" font-size="23" font-weight="700" text-anchor="middle" fill="#166534">INIZIO</text>
+<path d="M400 144 V187" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<polygon points="300,198 520,198 490,260 270,260" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+<text x="395" y="237" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#1d4ed8">Leggi lato</text>
+<path d="M395 260 V308" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<rect x="260" y="320" width="280" height="80" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
+<text x="400" y="368" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#9a3412">area = lato × lato</text>
+<path d="M400 400 V450" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<polygon points="300,462 520,462 490,524 270,524" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+<text x="395" y="501" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#1d4ed8">Mostra area</text>
+<path d="M395 524 V576" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<rect x="285" y="588" width="230" height="68" rx="34" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+<text x="400" y="630" font-family="Arial,sans-serif" font-size="23" font-weight="700" text-anchor="middle" fill="#166534">FINE</text>
+<text x="400" y="708" font-family="Arial,sans-serif" font-size="17" text-anchor="middle" fill="#64748b">Le frecce indicano l'ordine dei passaggi.</text>
+</svg>

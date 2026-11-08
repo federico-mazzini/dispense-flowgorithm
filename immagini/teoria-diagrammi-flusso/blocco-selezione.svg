@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430">
+<rect width="900" height="430" fill="#ffffff"/>
+<text x="450" y="54" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#17365D" text-anchor="middle">Il blocco di selezione</text>
+<polygon points="450,105 610,215 450,325 290,215" fill="#DCEAF7" stroke="#315B7D" stroke-width="4"/>
+<text x="450" y="225" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17365D" text-anchor="middle">SELEZIONE</text>
+<text x="450" y="382" font-family="Arial,sans-serif" font-size="20" fill="#536579" text-anchor="middle">Il programma sceglie quale strada seguire</text>
+</svg>

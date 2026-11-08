@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="820" viewBox="0 0 800 820">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#475569"/></marker></defs>
+<rect width="800" height="820" rx="24" fill="#ffffff"/>
+<text x="400" y="48" font-family="Arial,sans-serif" font-size="27" font-weight="700" text-anchor="middle" fill="#1e293b">Area di un quadrato</text>
+<rect x="285" y="80" width="230" height="68" rx="34" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+<text x="400" y="122" font-family="Arial,sans-serif" font-size="23" font-weight="700" text-anchor="middle" fill="#166534">INIZIO</text>
+<path d="M400 148 V195" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<polygon points="300,207 520,207 490,269 270,269" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+<text x="395" y="246" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#1d4ed8">Leggi lato</text>
+<path d="M395 269 V322" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<rect x="250" y="334" width="300" height="80" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
+<text x="400" y="382" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#9a3412">area = lato × lato</text>
+<path d="M400 414 V468" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<polygon points="300,480 520,480 490,542 270,542" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
+<text x="395" y="519" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#1d4ed8">Mostra area</text>
+<path d="M395 542 V596" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+<rect x="285" y="608" width="230" height="68" rx="34" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
+<text x="400" y="650" font-family="Arial,sans-serif" font-size="23" font-weight="700" text-anchor="middle" fill="#166534">FINE</text>
+<text x="400" y="725" font-family="Arial,sans-serif" font-size="18" text-anchor="middle" fill="#475569">Ovale: inizio/fine · Parallelogramma: input/output</text>
+<text x="400" y="755" font-family="Arial,sans-serif" font-size="18" text-anchor="middle" fill="#475569">Rettangolo: elaborazione · Frecce: ordine dei passaggi</text>
+</svg>

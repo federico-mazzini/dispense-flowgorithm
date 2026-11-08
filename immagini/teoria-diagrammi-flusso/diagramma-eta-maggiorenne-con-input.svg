@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720">
+<rect width="1000" height="720" fill="#ffffff"/>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#243247;font-size:22px;text-anchor:middle}.flow{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#arrow)}.terminal{fill:#d9ead3;stroke:#6aa84f;stroke-width:2.5}.io{fill:#d9eaf7;stroke:#6fa8dc;stroke-width:2.5}.decision{fill:#fff2cc;stroke:#d6b656;stroke-width:2.5}.branch{font-weight:bold;font-size:20px}</style>
+<rect x="405" y="25" width="190" height="54" rx="27" class="terminal"/><text x="500" y="59">INIZIO</text>
+<path class="flow" d="M500 79 V118"/>
+<polygon class="io" points="390,120 610,120 580,176 360,176"/><text x="485" y="154">Leggi eta</text>
+<path class="flow" d="M485 176 V220"/>
+<polygon class="decision" points="485,220 610,290 485,360 360,290"/><text x="485" y="297">eta &gt;= 18?</text>
+<path class="flow" d="M405 315 L280 385"/>
+<path class="flow" d="M565 315 L700 385"/>
+<text class="branch" x="325" y="345">SÌ</text><text class="branch" x="650" y="345">NO</text>
+<polygon class="io" points="125,385 345,385 315,445 95,445"/><text x="220" y="421">Mostra “Puoi entrare”</text>
+<polygon class="io" points="655,385 875,385 845,445 625,445"/><text x="750" y="421">Mostra “Non puoi entrare”</text>
+<path class="flow" d="M220 445 V500 L500 560"/>
+<path class="flow" d="M750 445 V500 L500 560"/>
+<rect x="405" y="560" width="190" height="54" rx="27" class="terminal"/><text x="500" y="594">FINE</text>
+</svg>

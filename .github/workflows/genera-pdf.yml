@@ -30,6 +30,7 @@ jobs:
         run: |
           typst compile flowgorithm.typ flowgorithm.pdf
           typst compile diagrammi-flusso.typ diagrammi-flusso.pdf
+          typst compile --pdf-standard ua-1 teoria-diagrammi-flusso.typ teoria-diagrammi-flusso.pdf
       - name: Pubblica il PDF
         uses: actions/upload-artifact@v4
         with:
@@ -42,5 +43,12 @@ jobs:
         with:
           name: dispense-diagrammi-flusso
           path: diagrammi-flusso.pdf
+          if-no-files-found: error
+          retention-days: 90
+      - name: Pubblica il PDF di teoria
+        uses: actions/upload-artifact@v4
+        with:
+          name: dispense-teoria-diagrammi-flusso
+          path: teoria-diagrammi-flusso.pdf
           if-no-files-found: error
           retention-days: 90

@@ -66,3 +66,13 @@ typst compile diagrammi-flusso.typ diagrammi-flusso.pdf
 Il workflow esistente, attivato con `[pdf]` o manualmente, genera entrambi i documenti. Per questa dispensa scaricare l'artifact **dispense-diagrammi-flusso**, che contiene `diagrammi-flusso.pdf`.
 
 Il materiale fornito elenca anche una Fase 7 sui cicli semplici, ma il relativo file non è incluso nell'esportazione: la sezione non è presente in questa versione.
+
+## Teoria: programmi e diagrammi di flusso
+
+`teoria-diagrammi-flusso.typ` raccoglie la teoria e gli esempi svolti, senza gli esercizi autonomi: programmi e software, input/elaborazione/output, blocchi, esempi e decisioni. Le 16 immagini originali sono in `immagini/teoria-diagrammi-flusso/`.
+
+```bash
+typst compile --pdf-standard ua-1 teoria-diagrammi-flusso.typ teoria-diagrammi-flusso.pdf
+```
+
+Il workflow con `[pdf]` o avvio manuale genera ora tutti e tre i documenti. La teoria è nell'artifact **dispense-teoria-diagrammi-flusso**. Il PDF include indice con collegamenti, segnalibri, lingua italiana, tabelle con intestazioni e testi alternativi per le immagini; l'esportazione usa PDF/UA-1. La compilazione non sostituisce una verifica completa con lettore di schermo.
