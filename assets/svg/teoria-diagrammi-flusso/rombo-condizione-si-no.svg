@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300"><rect width="640" height="300" fill="#ffffff"/><polygon points="320,35 455,150 320,265 185,150" fill="#fff2cc" stroke="#c9a227" stroke-width="4"/><text x="320" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="25" fill="#222222">condizione</text><text x="125" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#222222">SÌ</text><text x="515" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="bold" fill="#222222">NO</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="234" viewBox="0 0 560 234">
+<title>Condizione</title>
+<g>
+<polygon points="280,26 415,103 280,180 145,103" fill="#fae9de" stroke="#b98967" stroke-width="2.6"/>
+<text x="280" y="110.82" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="23" font-weight="700" fill="#173652">condizione</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="145,103 60,103 60,185"/><polygon fill="#40617a" points="60,185 56.00,175.00 64.00,175.00"/>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="415,103 500,103 500,185"/><polygon fill="#40617a" points="500,185 496.00,175.00 504.00,175.00"/>
+<text x="100" y="87.82" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="23" font-weight="700" fill="#173652">SÌ</text>
+<text x="460" y="87.82" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="23" font-weight="700" fill="#173652">NO</text>
+</svg>

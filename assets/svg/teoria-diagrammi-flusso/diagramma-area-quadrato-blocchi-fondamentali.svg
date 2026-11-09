@@ -1,21 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="820" viewBox="0 0 800 820">
-<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#475569"/></marker></defs>
-<rect width="800" height="820" rx="24" fill="#ffffff"/>
-<text x="400" y="48" font-family="Arial,sans-serif" font-size="27" font-weight="700" text-anchor="middle" fill="#1e293b">Area di un quadrato</text>
-<rect x="285" y="80" width="230" height="68" rx="34" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
-<text x="400" y="122" font-family="Arial,sans-serif" font-size="23" font-weight="700" text-anchor="middle" fill="#166534">INIZIO</text>
-<path d="M400 148 V195" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-<polygon points="300,207 520,207 490,269 270,269" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
-<text x="395" y="246" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#1d4ed8">Leggi lato</text>
-<path d="M395 269 V322" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-<rect x="250" y="334" width="300" height="80" rx="4" fill="#ffedd5" stroke="#ea580c" stroke-width="3"/>
-<text x="400" y="382" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#9a3412">area = lato × lato</text>
-<path d="M400 414 V468" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-<polygon points="300,480 520,480 490,542 270,542" fill="#dbeafe" stroke="#2563eb" stroke-width="3"/>
-<text x="395" y="519" font-family="Arial,sans-serif" font-size="22" text-anchor="middle" fill="#1d4ed8">Mostra area</text>
-<path d="M395 542 V596" stroke="#475569" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
-<rect x="285" y="608" width="230" height="68" rx="34" fill="#dcfce7" stroke="#16a34a" stroke-width="3"/>
-<text x="400" y="650" font-family="Arial,sans-serif" font-size="23" font-weight="700" text-anchor="middle" fill="#166534">FINE</text>
-<text x="400" y="725" font-family="Arial,sans-serif" font-size="18" text-anchor="middle" fill="#475569">Ovale: inizio/fine · Parallelogramma: input/output</text>
-<text x="400" y="755" font-family="Arial,sans-serif" font-size="18" text-anchor="middle" fill="#475569">Rettangolo: elaborazione · Frecce: ordine dei passaggi</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="554" viewBox="0 0 540 554">
+<title>Area di un quadrato</title>
+<text x="270.0" y="30.5" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="25" font-weight="700" fill="#173652">Area di un quadrato</text>
+<g>
+<ellipse cx="270.0" cy="76.0" rx="75.0" ry="24.0" fill="#e5f1e8" stroke="#5e8b70" stroke-width="2.6"/>
+<text x="270.0" y="83.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="700" fill="#173652">INIZIO</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="270.0,100.0 270.0,150.25"/><polygon fill="#40617a" points="270.0,150.25 266.00,140.25 274.00,140.25"/>
+<g>
+<polygon points="115.5,150.25 442.5,150.25 424.5,203.25 97.5,203.25" fill="#e4effb" stroke="#6085ab" stroke-width="2.6"/>
+<text x="270.0" y="184.23" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="400" fill="#173652">Leggi lato</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="270.0,203.25 270.0,251.0"/><polygon fill="#40617a" points="270.0,251.0 266.00,241.00 274.00,241.00"/>
+<g>
+<rect x="97.5" y="251.0" width="345" height="53" fill="#fae9de" stroke="#b98967" stroke-width="2.6"/>
+<text x="270.0" y="284.98" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="400" fill="#173652">area = lato × lato</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="270.0,304.0 270.0,351.75"/><polygon fill="#40617a" points="270.0,351.75 266.00,341.75 274.00,341.75"/>
+<g>
+<polygon points="115.5,351.75 442.5,351.75 424.5,404.75 97.5,404.75" fill="#e4effb" stroke="#6085ab" stroke-width="2.6"/>
+<text x="270.0" y="385.73" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="400" fill="#173652">Mostra area</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="270.0,404.75 270.0,455.0"/><polygon fill="#40617a" points="270.0,455.0 266.00,445.00 274.00,445.00"/>
+<g>
+<ellipse cx="270.0" cy="479.0" rx="75.0" ry="24.0" fill="#e5f1e8" stroke="#5e8b70" stroke-width="2.6"/>
+<text x="270.0" y="486.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="700" fill="#173652">FINE</text>
+</g>
+<text x="270.0" y="529.78" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="17" font-weight="400" fill="#173652">Ovale: inizio/fine · Parallelogramma: input/output</text>
+<text x="270.0" y="551.78" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="17" font-weight="400" fill="#173652">Rettangolo: elaborazione · Frecce: ordine dei passaggi</text>
 </svg>

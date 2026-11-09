@@ -1,18 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="720" viewBox="0 0 1000 720">
-<rect width="1000" height="720" fill="#ffffff"/>
-<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#475569"/></marker></defs>
-<style>text{font-family:Arial,Helvetica,sans-serif;fill:#243247;font-size:22px;text-anchor:middle}.flow{fill:none;stroke:#475569;stroke-width:3;marker-end:url(#arrow)}.terminal{fill:#d9ead3;stroke:#6aa84f;stroke-width:2.5}.io{fill:#d9eaf7;stroke:#6fa8dc;stroke-width:2.5}.decision{fill:#fff2cc;stroke:#d6b656;stroke-width:2.5}.branch{font-weight:bold;font-size:20px}</style>
-<rect x="405" y="25" width="190" height="54" rx="27" class="terminal"/><text x="500" y="59">INIZIO</text>
-<path class="flow" d="M500 79 V118"/>
-<polygon class="io" points="390,120 610,120 580,176 360,176"/><text x="485" y="154">Leggi eta</text>
-<path class="flow" d="M485 176 V220"/>
-<polygon class="decision" points="485,220 610,290 485,360 360,290"/><text x="485" y="297">eta &gt;= 18?</text>
-<path class="flow" d="M405 315 L280 385"/>
-<path class="flow" d="M565 315 L700 385"/>
-<text class="branch" x="325" y="345">SÌ</text><text class="branch" x="650" y="345">NO</text>
-<polygon class="io" points="125,385 345,385 315,445 95,445"/><text x="220" y="421">Mostra “Puoi entrare”</text>
-<polygon class="io" points="655,385 875,385 845,445 625,445"/><text x="750" y="421">Mostra “Non puoi entrare”</text>
-<path class="flow" d="M220 445 V500 L500 560"/>
-<path class="flow" d="M750 445 V500 L500 560"/>
-<rect x="405" y="560" width="190" height="54" rx="27" class="terminal"/><text x="500" y="594">FINE</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="527" viewBox="0 0 660 527">
+<title>eta &gt;= 18?</title>
+<g>
+<ellipse cx="330" cy="36" rx="88.0" ry="25.0" fill="#e5f1e8" stroke="#5e8b70" stroke-width="2.6"/>
+<text x="330" y="43.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="700" fill="#173652">INIZIO</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="330,61 330,94"/><polygon fill="#40617a" points="330,94 326.00,84.00 334.00,84.00"/>
+<g>
+<polygon points="215.5,94 462.5,94 444.5,150 197.5,150" fill="#e4effb" stroke="#6085ab" stroke-width="2.6"/>
+<text x="330" y="129.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="400" fill="#173652">Leggi eta</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="330,150 330,185"/><polygon fill="#40617a" points="330,185 326.00,175.00 334.00,175.00"/>
+<g>
+<polygon points="330,185 450,242 330,299 210,242" fill="#fae9de" stroke="#b98967" stroke-width="2.6"/>
+<text x="330" y="249.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="700" fill="#173652">eta &gt;= 18?</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="210,242 155,242 155,329"/><polygon fill="#40617a" points="155,329 151.00,319.00 159.00,319.00"/>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="450,242 505,242 505,329"/><polygon fill="#40617a" points="505,329 501.00,319.00 509.00,319.00"/>
+<text x="172" y="230.14" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="21" font-weight="700" fill="#173652">SÌ</text>
+<text x="490" y="230.14" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="21" font-weight="700" fill="#173652">NO</text>
+<g>
+<polygon points="27.5,329 300.5,329 282.5,401 9.5,401" fill="#e4effb" stroke="#6085ab" stroke-width="2.6"/>
+<text x="155" y="359.72" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="400" fill="#173652">Mostra</text>
+<text x="155" y="385.24" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="400" fill="#173652">“Puoi entrare”</text>
+</g>
+<g>
+<polygon points="377.5,329 650.5,329 632.5,401 359.5,401" fill="#e4effb" stroke="#6085ab" stroke-width="2.6"/>
+<text x="505" y="359.72" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="400" fill="#173652">Mostra</text>
+<text x="505" y="385.24" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="400" fill="#173652">“Non puoi entrare”</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="155,401 155,440 505,440 505,401"/>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="330,440 330,466"/><polygon fill="#40617a" points="330,466 326.00,456.00 334.00,456.00"/>
+<g>
+<ellipse cx="330" cy="491" rx="88.0" ry="25.0" fill="#e5f1e8" stroke="#5e8b70" stroke-width="2.6"/>
+<text x="330" y="498.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="700" fill="#173652">FINE</text>
+</g>
 </svg>

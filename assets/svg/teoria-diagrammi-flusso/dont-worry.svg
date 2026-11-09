@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="375" viewBox="0 0 560 375">
+<title>Do you have a problem?</title>
+<g>
+<polygon points="270,8 398,73 270,138 142,73" fill="#fae9de" stroke="#b98967" stroke-width="2.6"/>
+<text x="270" y="68.44" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="19" font-weight="700" fill="#173652">Do you have</text>
+<text x="270" y="90.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="19" font-weight="700" fill="#173652">a problem?</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="142,73 135,73 135,148"/><polygon fill="#40617a" points="135,148 131.00,138.00 139.00,138.00"/>
+<text x="106" y="120.8" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="20" font-weight="700" fill="#173652">Yes</text>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="398,73 490,73 490,290 364,290 364,316"/><polygon fill="#40617a" points="364,316 360.00,306.00 368.00,306.00"/>
+<text x="449" y="62.8" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="20" font-weight="700" fill="#173652">No</text>
+<g>
+<polygon points="135,148 258,208 135,268 12,208" fill="#fae9de" stroke="#b98967" stroke-width="2.6"/>
+<text x="135" y="194.06" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="17" font-weight="700" fill="#173652">Can you do</text>
+<text x="135" y="213.78" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="17" font-weight="700" fill="#173652">something</text>
+<text x="135" y="233.5" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="17" font-weight="700" fill="#173652">about it?</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="135,268 135,295 237,295 237,316"/><polygon fill="#40617a" points="237,316 233.00,306.00 241.00,306.00"/>
+<text x="165" y="290.12" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="18" font-weight="700" fill="#173652">Yes</text>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="258,208 305,208 305,316"/><polygon fill="#40617a" points="305,316 301.00,306.00 309.00,306.00"/>
+<text x="288" y="195.12" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="18" font-weight="700" fill="#173652">No</text>
+<g>
+<polygon points="168,316 450,316 432,368 150,368" fill="#e4effb" stroke="#6085ab" stroke-width="2.6"/>
+<text x="300" y="349.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="400" fill="#173652">Then don’t worry.</text>
+</g>
+</svg>
