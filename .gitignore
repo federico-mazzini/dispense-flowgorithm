@@ -1,11 +1,5 @@
-# Output locali
-/flowgorithm.pdf
-/esercizi diagrammi flusso.pdf
-/teoria-diagrammi-flusso.pdf
-/output/
+/dist/
 /tmp/
-
-# File temporanei e di sistema
 .DS_Store
 ._*
 *.tmp
