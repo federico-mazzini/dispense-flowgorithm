@@ -21,8 +21,9 @@
   #set par(justify: false)
   #align(center)[#text(size: 14pt, weight: "bold", fill: blu)[#body]]
 ]
-#let fase(termine, body) = block(breakable: false)[
-  #block(below: 6pt, sticky: true)[#etichetta(termine)]
+#let fase(termine, body) = block(breakable: false, above: 24pt, below: 18pt)[
+  #etichetta(termine)
+  #v(2pt)
   #body
 ]
 #let confronto(a, b) = block(breakable: false)[

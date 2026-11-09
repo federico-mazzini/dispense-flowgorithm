@@ -104,42 +104,39 @@ I blocchi di elaborazione sono 2, perchè sono necessari due calcoli.
 #pagebreak()
 == Consigli pratici
 
-=== Checklist: controllare il diagramma
+=== Controlla il diagramma
 
-- Ho inserito un blocco *INIZIO* e un blocco *FINE*?
-- Ho usato il parallelogramma per ogni input e output?
-- Ho usato il rettangolo per i calcoli?
-- Ho collegato i blocchi con le frecce?
-- Le frecce si seguono in un ordine chiaro, dall'inizio alla fine e dall'alto in basso?
+Parti da INIZIO e segui le frecce fino a FINE. A ogni passaggio, controlla questi elementi.
+
+#table(
+  columns: (29%, 71%), inset: (x: 8pt, y: 7pt), align: left,
+  table.header([*Elemento*], [*Domanda di controllo*]),
+  [#etichetta[Estremi]], [Ho inserito sia il blocco INIZIO sia il blocco FINE?],
+  [#etichetta[Input e output]], [Ho usato un parallelogramma ogni volta che leggo o mostro un dato?],
+  [#etichetta[Calcoli]], [Ho usato un rettangolo per ogni operazione?],
+  [#etichetta[Frecce]], [I blocchi sono collegati? Posso seguire il percorso dall’alto in basso, dall’inizio alla fine?],
+)
 
 #messaggio[Regola fondamentale: usare sempre gli stessi nomi]
 
-Quando scrivi un diagramma, *il nome dato a un'informazione deve rimanere uguale in tutti i blocchi in cui viene utilizzata*. Non cambiare nome allo stesso dato da un blocco all'altro.
+Assegna un nome chiaro a ogni dato che leggi. Usa quel nome nei calcoli e, quando mostri un risultato, usa il nome con cui lo hai calcolato.
 
-- *Input:* assegna un nome chiaro a ogni dato che ricevi.
-- *Elaborazione:* usa esattamente gli stessi nomi quando fai i calcoli.
-- *Output:* quando mostri il risultato, usa lo stesso nome che gli hai dato durante l'elaborazione.
+=== Confronta i due esempi
 
-=== Esempio corretto — Area del quadrato
+Entrambi i diagrammi calcolano l’area di un quadrato. Segui il nome del risultato dal calcolo all’output.
 
-#nota[
-```
-Input: lato
-Elaborazione: area = lato × lato
-Output: mostra area
-```
+#table(
+  columns: (24%, 38%, 38%), inset: (x: 8pt, y: 8pt), align: left,
+  table.header([*Fase*], [*Esempio corretto*], [*Esempio da evitare*]),
+  [#etichetta[Input]], [Leggi `lato`], [Leggi `lato`],
+  [#etichetta[Elaborazione]], [`area = lato × lato`], [`superficie = lato × lato`],
+  [#etichetta[Output]], [Mostra `area`], [Mostra `area`],
+)
+
+#block(width: 100%, above: 15pt, inset: 12pt, fill: blu.lighten(95%), breakable: false)[
+  #etichetta[Trova e correggi l’errore]
+  #v(4pt)
+  Nel primo esempio il calcolo assegna il risultato ad `area` e l’output mostra proprio `area`. Nel secondo il risultato si chiama `superficie`, ma l’output chiede `area`, che non ha ricevuto alcun valore.
+
+  *Come correggeresti l’output cambiando un solo nome?*
 ]
-
-Il nome `lato` è lo stesso nell'input e nel calcolo. Il risultato si chiama `area` nell'elaborazione e viene mostrato come `area` nell'output.
-
-=== Esempio da evitare
-
-#nota[
-```
-Input: lato
-Elaborazione: superficie = lato × lato
-Output: mostra area
-```
-]
-
-Qui il risultato viene chiamato prima `superficie` e poi `area`: non è chiaro se si stia parlando della stessa cosa.

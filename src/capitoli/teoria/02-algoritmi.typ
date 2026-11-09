@@ -114,7 +114,7 @@ Prima di considerare concluso un algoritmo, facciamo una prova manuale: seguiamo
 )
 ]
 
-== Ripasso
+#heading(level: 2, numbering: none)[Ripasso]
 
 - Un algoritmo è una sequenza ordinata e precisa di istruzioni.
 - Prima di costruirlo, individuiamo obiettivo, dati in ingresso e risultato.
@@ -122,7 +122,7 @@ Prima di considerare concluso un algoritmo, facciamo una prova manuale: seguiamo
 - Possiamo rappresentarlo con parole, diagrammi di flusso o un linguaggio di programmazione.
 - Per controllarlo, seguiamo i passaggi con dati di prova.
 
-== Verifica se hai capito
+#heading(level: 2, numbering: none)[Verifica se hai capito]
 
 + Che cos'è un algoritmo?
 

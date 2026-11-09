@@ -48,7 +48,7 @@
   ],
 )
 
-#let dispensa(body, titolo: "Flowgorithm", sottotitolo: "Dispensa didattica di informatica.", numerazione: "1.1") = {
+#let dispensa(body, titolo: "Flowgorithm", sottotitolo: "Dispensa didattica di informatica.", numerazione: "1.1", spazio-paragrafi: 0.8em, interlinea: 0.60em) = {
   set document(title: titolo, author: "Materiale didattico")
   // Font incluso in Typst: nessuna installazione aggiuntiva in locale o in CI.
   set text(font: "Libertinus Serif", size: 11pt, lang: "it", fill: black)
@@ -62,7 +62,7 @@
     },
     footer: context align(right, text(size: 9pt, fill: grigio, counter(page).display("1"))),
   )
-  set par(justify: true, leading: 0.60em, spacing: 0.8em)
+  set par(justify: true, leading: interlinea, spacing: spazio-paragrafi)
   set heading(numbering: numerazione)
   set list(indent: 14pt, body-indent: 5pt, spacing: 0.85em)
   set block(above: 9pt, below: 9pt)
@@ -80,6 +80,7 @@
   show heading.where(level: 1): set text(size: 19pt, weight: "bold", fill: blu)
   show heading.where(level: 2): set text(size: 14pt, weight: "bold")
   show heading.where(level: 3): set text(size: 11.5pt, weight: "bold", fill: blu)
+  show heading.where(level: 3): set heading(numbering: none)
   show figure.caption: set text(size: 9pt, fill: grigio)
   show link: set text(fill: blu)
 

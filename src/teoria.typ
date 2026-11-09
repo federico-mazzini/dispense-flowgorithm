@@ -3,6 +3,8 @@
   titolo: "Programmi e diagrammi di flusso",
   sottotitolo: "Teoria ed esempi svolti.",
   numerazione: "1.1",
+  spazio-paragrafi: 1.1em,
+  interlinea: 0.68em,
 )
 
 #outline(title: [Contenuti], depth: 1)

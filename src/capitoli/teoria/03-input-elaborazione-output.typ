@@ -155,40 +155,38 @@ Creiamo un programma per calcolare l’area di un quadrato con lato di qualsiasi
 #pagebreak()
 == Come riconoscere le tre fasi
 
-Quando leggi un problema, fatti queste domande, nell'ordine.
-
-#nota[
-#etichetta[0. PROBLEMA — Ho capito il problema?]
-#v(4pt)
-Ho capito quale problema devo risolvere? Riesco a fare degli esempi?
-#v(9pt)
+#etichetta[Prima di iniziare]
+#block(above: 4pt, below: 16pt)[
+  *Ho capito quale problema devo risolvere?* Prova a spiegarlo a parole tue e a fare un esempio.
 ]
 
-#nota[
-#etichetta[1. INPUT — Che cosa conosco o devo chiedere?]
-#v(4pt)
-Quali dati sono necessari per risolvere il problema?
-#v(9pt)
-]
+Quando il problema è chiaro, segui le domande nell’ordine. Ogni riga corrisponde a una fase.
 
-#nota[
-#etichetta[2. ELABORAZIONE — Che cosa devo fare con quei dati?]
-#v(4pt)
-Quali operazioni, formule o confronti devo eseguire?
-#v(9pt)
-]
+#table(
+  columns: (30%, 70%),
+  inset: (x: 8pt, y: 11pt),
+  align: left,
+  table.header([*Fase*], [*Domande guida*]),
+  [#etichetta[1. Input]],
+  [*Che cosa conosco o devo chiedere?*
 
-#nota[
-#etichetta[3. OUTPUT — Che cosa devo ottenere?]
-#v(4pt)
-Quale risultato deve essere restituito o mostrato?
-#v(9pt)
-]
+Quali dati sono necessari per risolvere il problema?],
+  [#etichetta[2. Elaborazione]],
+  [*Che cosa devo fare con quei dati?*
 
-#nota[*Un piccolo trucco:* prova a raccontare il problema con questa frase:
+Quali operazioni, formule o confronti devo eseguire?],
+  [#etichetta[3. Output]],
+  [*Che cosa devo ottenere?*
 
-«Ricevo \_\_\_\_\_\_, eseguo \_\_\_\_\_\_ e ottengo \_\_\_\_\_\_».
+Quale risultato deve essere restituito o mostrato?],
+)
 
-Se riesci a completarla, probabilmente hai individuato le tre fasi.
+#block(width: 100%, above: 18pt, inset: 12pt, fill: blu.lighten(95%), breakable: false)[
+  #etichetta[Metti insieme le tre fasi]
+  #v(4pt)
+  Prova a raccontare il problema completando questa frase:
 
+  «Ricevo #box(width: 24mm, line(length: 100%, stroke: 0.5pt + blu)), eseguo #box(width: 24mm, line(length: 100%, stroke: 0.5pt + blu)) e ottengo #box(width: 24mm, line(length: 100%, stroke: 0.5pt + blu)).»
+
+  Se riesci a completarla, probabilmente hai individuato le tre fasi.
 ]
