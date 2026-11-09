@@ -212,8 +212,6 @@ Per questo usiamo una seconda selezione nel percorso NO della prima:
 
 #figura("/assets/immagini/teoria-diagrammi-flusso/bb02bbf0-04ec-4d29-887f-6bb388fbf5e7.png", 100mm, alt: "Diagramma umoristico in inglese: hai un problema? Se no, non preoccuparti. Se sì, puoi fare qualcosa? In entrambi i casi conclude: non preoccuparti.")
 
-#didascalia[Should you say it out loud?]
-
 #figura("/assets/immagini/teoria-diagrammi-flusso/image.png", 82mm, alt: "Diagramma umoristico in inglese: dovresti dirlo ad alta voce? Una serie di decisioni sul contesto, sulle persone presenti e sulle conseguenze porta a parlare oppure tacere.")
 
 
