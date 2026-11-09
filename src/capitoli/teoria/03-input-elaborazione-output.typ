@@ -38,7 +38,7 @@ Sono i calcoli o le trasformazioni che il programma esegue sui dati ricevuti.
 *Esempi:* un'area calcolata, una media, un prezzo finale, un messaggio o un grafico.
 ])
 
-#richiamo[*Da ricordare:* l'input non deve necessariamente essere digitato da una persona. Un programma può ricevere dati anche da un sensore, da un file o da un altro programma.
+#nota[*Da ricordare:* l'input non deve necessariamente essere digitato da una persona. Un programma può ricevere dati anche da un sensore, da un file o da un altro programma.
 
 ]
 
@@ -90,7 +90,7 @@ Area
 Esempio: 25 cm²
 ])
 
-#richiamo[*Attenzione:* il programma deve essere generale, non specifico su un esempio.
+#nota[*Attenzione:* il programma deve essere generale, non specifico su un esempio.
 Non creiamo un programma per calcolare l’area di un quadrato con lato 5cm.
 Creiamo un programma per calcolare l’area di un quadrato con lato di qualsiasi misura.
 
@@ -185,7 +185,7 @@ Quale risultato deve essere restituito o mostrato?
 #v(9pt)
 ]
 
-#richiamo[*Un piccolo trucco:* prova a raccontare il problema con questa frase:
+#nota[*Un piccolo trucco:* prova a raccontare il problema con questa frase:
 
 «Ricevo \_\_\_\_\_\_, eseguo \_\_\_\_\_\_ e ottengo \_\_\_\_\_\_».
 

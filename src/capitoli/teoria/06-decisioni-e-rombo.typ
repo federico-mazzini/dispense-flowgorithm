@@ -1,6 +1,6 @@
 #import "/styles/didattica.typ": *
 
-= Diagrammi di flusso: le decisioni e il rombo <cap5>
+= Le decisioni e il rombo <cap5>
 
 #nota[
 
@@ -44,7 +44,7 @@ Una *condizione* è una domanda precisa che il programma controlla. La risposta 
 
 Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. Se `numero = -2`, la risposta è *NO*.
 
-=== Attenzione ai confronti
+#etichetta[Attenzione ai confronti]
 
 - `eta > 18` significa *maggiore di 18*: il valore 18 non è incluso.
 - `eta >= 18` significa *maggiore o uguale a 18*: il valore 18 è incluso.
@@ -82,7 +82,7 @@ Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. S
 
 #didascalia[Diagramma di flusso: numero positivo]
 
-#richiamo[*Da ricordare:* zero non è un numero positivo. Se `numero = 0`, la condizione `numero > 0` è falsa e si segue il ramo *NO*.
+#nota[*Da ricordare:* zero non è un numero positivo. Se `numero = 0`, la condizione `numero > 0` è falsa e si segue il ramo *NO*.
 
 ]
 
@@ -133,7 +133,7 @@ Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. S
 )
 ]
 
-#richiamo[*Attenzione al simbolo:* `>=` significa «maggiore o uguale». Per questo motivo, anche 18 soddisfa la condizione.
+#nota[*Attenzione al simbolo:* `>=` significa «maggiore o uguale». Per questo motivo, anche 18 soddisfa la condizione.
 
 ]
 
@@ -208,4 +208,4 @@ Per questo usiamo una seconda selezione nel percorso NO della prima:
 #figura("/assets/immagini/teoria-diagrammi-flusso/image.png", 82mm, alt: "Diagramma umoristico in inglese: dovresti dirlo ad alta voce? Una serie di decisioni sul contesto, sulle persone presenti e sulle conseguenze porta a parlare oppure tacere.")
 
 
-*Ripasso:* #link(<cap2>)[Input, elaborazione e output] · #link(<cap3>)[Diagrammi di flusso: i blocchi fondamentali] · #link(<cap4>)[Diagrammi di flusso: esempi svolti]
+*Ripasso:* #link(<cap2>)[Input, elaborazione e output] · #link(<cap3>)[I blocchi fondamentali] · #link(<cap4>)[Esempi svolti]

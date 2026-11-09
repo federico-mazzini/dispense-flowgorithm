@@ -17,10 +17,11 @@ Esempi: browser, videogiochi, Excel, Word, Google Drive
   ]),
 )
 
-#richiamo[*Idea chiave:* hardware e software collaborano. L’hardware è la parte fissa e stabilisce come è fatto il computer o il telefono, il software è la parte che stabilisce il comportamento. Se si apre Word sul computer, il computer è una macchina che scrive documento. Se si apre un gioco, il computer è una macchina che permette di giocare.
+#nota[*Idea chiave:* hardware e software collaborano. L’hardware è la parte fissa e stabilisce come è fatto il computer o il telefono, il software è la parte che stabilisce il comportamento. Se si apre Word sul computer, il computer è una macchina che scrive documento. Se si apre un gioco, il computer è una macchina che permette di giocare.
 
-=== Il software è costituito dai programmi
 ]
+
+#messaggio[Il software è costituito dai programmi]
 #v(10pt)
 
 == Che cos’è un programma?
@@ -29,9 +30,7 @@ Un *programma* è un insieme di *istruzioni* che il computer esegue per svolgere
 
 Le istruzioni vengono scritte usando un *linguaggio di programmazione*, seguendo regole precise.
 
-#nota[
-
-
+#messaggio[
 *Programmare significa* descrivere in modo preciso le istruzioni che un computer deve eseguire per raggiungere un risultato.
 
 ]
@@ -52,8 +51,7 @@ Progetta e realizza il programma, scrivendo le istruzioni che il computer deve e
   ]),
 )
 
-#nota[
-
+#messaggio[
 Saper usare un programma *non significa necessariamente sapere come è stato realizzato*.
 
 ]
@@ -80,7 +78,7 @@ Un'interfaccia ben progettata è chiara e intuitiva, cioè permette all’utente
 ]
 
 #pagebreak()
-#laboratorio[
+#sperimenta[
 == Scriviamo un programma con l’IA
 
 Un programma, in fondo, è *testo scritto in una forma che il computer può interpretare ed eseguire*. Non è un testo qualsiasi: deve rispettare le regole di un linguaggio di programmazione, un po' come una ricetta deve essere scritta in modo preciso per poter essere seguita.

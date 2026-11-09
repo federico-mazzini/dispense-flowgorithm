@@ -2,11 +2,29 @@
 #import "template.typ": blu, grigio, bordo, riquadro
 
 #let etichetta(body) = text(weight: "bold", fill: blu, body)
-#let nota(body) = riquadro(none, body)
-#let definizione(termine, body) = riquadro(termine, body)
+#let nota(body) = block(width: 100%, above: 9pt, below: 9pt, body)
+#let definizione(termine, body) = block(breakable: false)[
+  #block(below: 8pt, sticky: true)[#etichetta(termine)]
+  #body
+]
 #let richiamo(body) = riquadro(none, body)
-#let laboratorio(body) = riquadro([Sperimenta in laboratorio], body)
-#let fase(termine, body) = riquadro(termine, body)
+// Attività pratica per rinforzare la teoria: un solo bordo completo.
+#let sperimenta(body) = block(
+  width: 100%, breakable: false, inset: 12pt,
+  stroke: 1pt + blu, above: 12pt, below: 12pt,
+)[
+  #set par(justify: false)
+  #block(below: 8pt, sticky: true)[#etichetta[Sperimenta in laboratorio]]
+  #body
+]
+#let messaggio(body) = block(width: 100%, above: 16pt, below: 16pt, breakable: false)[
+  #set par(justify: false)
+  #align(center)[#text(size: 14pt, weight: "bold", fill: blu)[#body]]
+]
+#let fase(termine, body) = block(breakable: false)[
+  #block(below: 6pt, sticky: true)[#etichetta(termine)]
+  #body
+]
 #let confronto(a, b) = block(breakable: false)[
   #grid(columns: (1fr, 1fr), column-gutter: 9mm, a, b)
 ]

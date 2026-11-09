@@ -61,6 +61,8 @@ Modificare i capitoli in `src/capitoli/`. Le inclusioni e il loro ordine sono de
 
 Tutte le impostazioni grafiche condivise sono in `styles/template.typ`: A4, margini, Libertinus Serif a 11 pt, gerarchia dei titoli, testatina, numero di pagina, tabelle e riquadri con barra laterale blu. `styles/didattica.typ` adatta allo stesso stile definizioni, richiami, attività di laboratorio e confronti. Per cambiare il colore di tutte le dispense, modificare soltanto `blu` nel template.
 
+Usare `sperimenta` per le attività pratiche che rinforzano la teoria: produce un riquadro blu completo con il titolo “Sperimenta in laboratorio”. Per ora è usato solo nell’attività con l’IA della teoria. Usare `messaggio` per le frasi chiave centrate, senza numerazione né voce nell’indice. Le normali note, definizioni e fasi non hanno barre laterali; `richiamo` resta riservato a pochi avvisi importanti.
+
 Le immagini usano percorsi dalla radice Typst, per esempio `/assets/svg/teoria-diagrammi-flusso/blocco-selezione.svg`. Compilare sempre con `--root .` dalla radice del repository. Dopo una modifica, compilare e controllare visivamente i PDF, in particolare tabelle e diagrammi.
 
 Flowgorithm e teoria usano numerazione automatica dei titoli. La raccolta di esercizi conserva i nomi delle fasi e la numerazione locale degli esercizi. La teoria mantiene indice, collegamenti, segnalibri, lingua italiana, intestazioni delle tabelle, testi alternativi delle immagini ed esportazione **PDF/UA-1**. La compilazione non sostituisce una verifica completa con lettore di schermo.

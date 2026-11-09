@@ -1,6 +1,6 @@
 #import "/styles/didattica.typ": *
 
-= Diagrammi di flusso: i blocchi fondamentali <cap3>
+= I blocchi fondamentali <cap3>
 
 #nota[
 
@@ -81,7 +81,7 @@ Riprendiamo il problema dell'area del quadrato: il programma legge la misura del
 )
 ]
 
-#richiamo[*Importante:* non sono due metodi diversi per risolvere il problema. Sono due modi per descrivere lo stesso ragionamento. Il diagramma di flusso rende visibile il percorso da seguire.
+#nota[*Importante:* non sono due metodi diversi per risolvere il problema. Sono due modi per descrivere lo stesso ragionamento. Il diagramma di flusso rende visibile il percorso da seguire.
 
 ]
 

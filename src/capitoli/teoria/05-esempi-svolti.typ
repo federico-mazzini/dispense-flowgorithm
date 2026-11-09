@@ -1,6 +1,6 @@
 #import "/styles/didattica.typ": *
 
-= Diagrammi di flusso: esempi svolti <cap4>
+= Esempi svolti <cap4>
 
 #nota[
 
@@ -33,7 +33,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 #didascalia[Diagramma di flusso per calcolare l'area di un quadrato]
 
-#richiamo[*Da ricordare:* il lato deve essere ricevuto prima di poter calcolare l'area. Il risultato viene mostrato solo dopo il calcolo.
+#nota[*Da ricordare:* il lato deve essere ricevuto prima di poter calcolare l'area. Il risultato viene mostrato solo dopo il calcolo.
 
 ]
 
@@ -63,7 +63,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 #didascalia[Diagramma di flusso per calcolare la somma di due numeri]
 
-#richiamo[*Da ricordare:* se un calcolo richiede due dati, entrambi devono essere acquisiti prima di eseguire l'operazione.
+#nota[*Da ricordare:* se un calcolo richiede due dati, entrambi devono essere acquisiti prima di eseguire l'operazione.
 
 ]
 
@@ -94,7 +94,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 #figura("/assets/immagini/teoria-diagrammi-flusso/811b4a36-f356-4fe2-8818-45ca1ea99374.png", 100mm, alt: "Inizio; leggi prezzo; sconto = prezzo × 10 / 100; prezzo_finale = prezzo − sconto; mostra prezzo_finale; fine. Questo diagramma applica uno sconto fisso del 10%.")
 #richiamo[*Nota sul diagramma:* qui la percentuale è fissata al 10%. Per il caso generale descritto nel testo occorre leggere anche la percentuale e usarla al posto di 10 nel calcolo.]
 
-#richiamo[*Da ricordare:* il prezzo e la percentuale sono entrambi input. Se il prezzo è 23 € e la percentuale è 10, lo sconto è 2,30 € e il prezzo finale è 20,70 €.
+#nota[*Da ricordare:* il prezzo e la percentuale sono entrambi input. Se il prezzo è 23 € e la percentuale è 10, lo sconto è 2,30 € e il prezzo finale è 20,70 €.
 
 I blocchi di elaborazione sono 2, perchè sono necessari due calcoli.
 
@@ -112,7 +112,7 @@ I blocchi di elaborazione sono 2, perchè sono necessari due calcoli.
 - Ho collegato i blocchi con le frecce?
 - Le frecce si seguono in un ordine chiaro, dall'inizio alla fine e dall'alto in basso?
 
-=== Regola fondamentale: usare sempre gli stessi nomi
+#messaggio[Regola fondamentale: usare sempre gli stessi nomi]
 
 Quando scrivi un diagramma, *il nome dato a un'informazione deve rimanere uguale in tutti i blocchi in cui viene utilizzata*. Non cambiare nome allo stesso dato da un blocco all'altro.
 
@@ -122,7 +122,7 @@ Quando scrivi un diagramma, *il nome dato a un'informazione deve rimanere uguale
 
 === Esempio corretto — Area del quadrato
 
-#richiamo[
+#nota[
 ```
 Input: lato
 Elaborazione: area = lato × lato
@@ -134,7 +134,7 @@ Il nome `lato` è lo stesso nell'input e nel calcolo. Il risultato si chiama `ar
 
 === Esempio da evitare
 
-#richiamo[
+#nota[
 ```
 Input: lato
 Elaborazione: superficie = lato × lato
