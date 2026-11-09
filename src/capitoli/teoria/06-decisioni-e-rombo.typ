@@ -9,6 +9,8 @@ Il *rombo* rappresenta una decisione: il programma controlla una condizione e, i
 
 ]
 
+Il nome *blocco di selezione* significa che il programma può scegliere quale istruzione eseguire. Nel rombo scriviamo una domanda a cui si può rispondere *SÌ* oppure *NO*: questa domanda si chiama *condizione*.
+
 == A cosa serve il blocco di selezione?
 
 A volte un programma deve scegliere cosa fare in base a una situazione. Il rombo permette di *selezionare quale strada seguire*.
@@ -16,9 +18,13 @@ A volte un programma deve scegliere cosa fare in base a una situazione. Il rombo
 - Se la condizione è vera, il programma segue il percorso *SÌ*.
 - Se la condizione è falsa, il programma segue il percorso *NO*.
 
+Per esempio, un programma legge l’età di una persona e deve dire se è maggiorenne. Nel rombo scriviamo *«L’età è almeno 18 anni?»*. Con 20 anni il programma segue la freccia SÌ e mostra «Maggiorenne»; con 15 anni segue la freccia NO e mostra «Minorenne». Il rombo serve a scegliere il messaggio adatto al dato letto.
+
+Il programma segue *una sola delle due strade* ogni volta che incontra il rombo.
+
 Le due strade possono portare a operazioni o messaggi diversi e, in seguito, anche ricongiungersi.
 
-#figura("/assets/svg/teoria-diagrammi-flusso/blocco-selezione.svg", 100mm, alt: "Diagramma: Il blocco di selezione; SELEZIONE; Il programma sceglie quale strada seguire.")
+#figura("/assets/svg/teoria-diagrammi-flusso/rombo-condizione-si-no.svg", 100mm, alt: "Diagramma: condizione; SÌ; NO.")
 
 #pagebreak()
 == Che cos'è la condizione in un blocco di selezione?
@@ -53,7 +59,8 @@ Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. S
 
 ]
 
-#figura("/assets/svg/teoria-diagrammi-flusso/rombo-condizione-si-no.svg", 100mm, alt: "Diagramma: condizione; SÌ; NO.")
+
+#figura("/assets/svg/teoria-diagrammi-flusso/rombo-numero-positivo.svg", 100mm, alt: "Rombo con la condizione numero > 0?; ramo SÌ se il numero è maggiore di zero; ramo NO altrimenti.")
 
 #pagebreak()
 == Esempio svolto — Un numero è positivo?
@@ -204,6 +211,8 @@ Per questo usiamo una seconda selezione nel percorso NO della prima:
 === Non solo matematica :)
 
 #figura("/assets/immagini/teoria-diagrammi-flusso/bb02bbf0-04ec-4d29-887f-6bb388fbf5e7.png", 100mm, alt: "Diagramma umoristico in inglese: hai un problema? Se no, non preoccuparti. Se sì, puoi fare qualcosa? In entrambi i casi conclude: non preoccuparti.")
+
+#didascalia[Should you say it out loud?]
 
 #figura("/assets/immagini/teoria-diagrammi-flusso/image.png", 82mm, alt: "Diagramma umoristico in inglese: dovresti dirlo ad alta voce? Una serie di decisioni sul contesto, sulle persone presenti e sulle conseguenze porta a parlare oppure tacere.")
 

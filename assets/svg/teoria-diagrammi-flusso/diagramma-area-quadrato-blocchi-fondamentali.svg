@@ -1,6 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="540" height="554" viewBox="0 0 540 554">
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="467" viewBox="0 44 540 467">
 <title>Area di un quadrato</title>
-<text x="270.0" y="30.5" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="25" font-weight="700" fill="#173652">Area di un quadrato</text>
 <g>
 <ellipse cx="270.0" cy="76.0" rx="75.0" ry="24.0" fill="#e5f1e8" stroke="#5e8b70" stroke-width="2.6"/>
 <text x="270.0" y="83.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="700" fill="#173652">INIZIO</text>
@@ -25,6 +24,4 @@
 <ellipse cx="270.0" cy="479.0" rx="75.0" ry="24.0" fill="#e5f1e8" stroke="#5e8b70" stroke-width="2.6"/>
 <text x="270.0" y="486.48" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="22" font-weight="700" fill="#173652">FINE</text>
 </g>
-<text x="270.0" y="529.78" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="17" font-weight="400" fill="#173652">Ovale: inizio/fine · Parallelogramma: input/output</text>
-<text x="270.0" y="551.78" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="17" font-weight="400" fill="#173652">Rettangolo: elaborazione · Frecce: ordine dei passaggi</text>
 </svg>

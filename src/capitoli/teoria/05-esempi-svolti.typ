@@ -33,7 +33,9 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 #didascalia[Diagramma di flusso per calcolare l'area di un quadrato]
 
-#nota[*Da ricordare:* il lato deve essere ricevuto prima di poter calcolare l'area. Il risultato viene mostrato solo dopo il calcolo.
+#nota[Le frecce indicano l’ordine dei passaggi.
+
+*Da ricordare:* il lato deve essere ricevuto prima di poter calcolare l'area. Il risultato viene mostrato solo dopo il calcolo.
 
 ]
 

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="175" viewBox="0 18 560 175">
+<title>Condizione numero maggiore di zero</title>
+<g>
+<polygon points="280,26 415,103 280,180 145,103" fill="#fae9de" stroke="#b98967" stroke-width="2.6"/>
+<text x="280" y="110.82" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="23" font-weight="700" fill="#173652">numero &gt; 0?</text>
+</g>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="145,103 60,103 60,185"/><polygon fill="#40617a" points="60,185 56.00,175.00 64.00,175.00"/>
+<polyline fill="none" stroke="#40617a" stroke-width="2.8" stroke-linejoin="round" points="415,103 500,103 500,185"/><polygon fill="#40617a" points="500,185 496.00,175.00 504.00,175.00"/>
+<text x="100" y="87.82" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="23" font-weight="700" fill="#173652">SÌ</text>
+<text x="460" y="87.82" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="23" font-weight="700" fill="#173652">NO</text>
+</svg>

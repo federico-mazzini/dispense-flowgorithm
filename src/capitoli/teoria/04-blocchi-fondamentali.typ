@@ -67,6 +67,9 @@ Riprendiamo il problema dell'area del quadrato: il programma legge la misura del
 #figura("/assets/svg/teoria-diagrammi-flusso/diagramma-area-quadrato-blocchi-fondamentali.svg", 100mm, alt: "Diagramma: Area di un quadrato; INIZIO; Leggi lato; area = lato × lato; Mostra area; FINE; Ovale: inizio/fine · Parallelogramma: input/output; Rettangolo: elaborazione · Frecce: ordine dei passaggi.")
 
 
+#didascalia[Ovale: inizio/fine · Parallelogramma: input/output \ Rettangolo: elaborazione · Frecce: ordine dei passaggi]
+
+
 == Testo o diagramma?
 
 #block(breakable: false)[

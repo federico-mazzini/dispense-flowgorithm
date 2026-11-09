@@ -1,8 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="400" height="150" viewBox="0 0 400 150">
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="98" viewBox="0 7 400 98">
 <title>INPUT / OUTPUT</title>
 <g>
 <polygon points="60.5,15 357.5,15 339.5,97 42.5,97" fill="#e4effb" stroke="#6085ab" stroke-width="2.6"/>
 <text x="200" y="64.5" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="25" font-weight="400" fill="#173652">INPUT / OUTPUT</text>
 </g>
-<text x="200" y="134.46" text-anchor="middle" font-family="Arial, Liberation Sans, sans-serif" font-size="19" font-weight="400" fill="#173652">Forma: parallelogramma</text>
 </svg>
