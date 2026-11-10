@@ -1,1 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1353" viewBox="0 0 760 1353"><rect width="760" height="1353" fill="#fff"/><text x="380" y="50" font-size="26" font-weight="bold" font-family="Arial,Helvetica,sans-serif" fill="#202e3b" text-anchor="middle">La somma con valori inseriti dall'utente</text><rect x="280" y="83" width="200" height="60" rx="30" fill="#EED7F5" stroke="#AA88B1" stroke-width="2.5"/><text x="380" y="122" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Main</text><path d="M380 143 V172" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,168 387,168 380,178" fill="#4E555C"/><rect x="170" y="187" width="420" height="60" fill="#FFF9C4" stroke="#C2B77C" stroke-width="2.2"/><line x1="188" y1="187" x2="188" y2="247" stroke="#C2B77C" stroke-width="2.2"/><text x="380" y="226" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Integer a</text><path d="M380 247 V276" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,272 387,272 380,282" fill="#4E555C"/><rect x="170" y="291" width="420" height="60" fill="#FFF9C4" stroke="#C2B77C" stroke-width="2.2"/><line x1="188" y1="291" x2="188" y2="351" stroke="#C2B77C" stroke-width="2.2"/><text x="380" y="330" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Integer b</text><path d="M380 351 V380" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,376 387,376 380,386" fill="#4E555C"/><rect x="170" y="395" width="420" height="60" fill="#FFF9C4" stroke="#C2B77C" stroke-width="2.2"/><line x1="188" y1="395" x2="188" y2="455" stroke="#C2B77C" stroke-width="2.2"/><text x="380" y="434" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Integer somma</text><path d="M380 455 V484" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,480 387,480 380,490" fill="#4E555C"/><polygon points="174,499 625,499 586,559 135,559" fill="#CBF1CF" stroke="#86BF91" stroke-width="2.3"/><text x="380" y="538" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="22">Output &quot;Inserisci il primo numero&quot;</text><path d="M380 559 V588" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,584 387,584 380,594" fill="#4E555C"/><polygon points="209,603 590,603 551,663 170,663" fill="#CFDFF5" stroke="#91A9C8" stroke-width="2.3"/><text x="380" y="642" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Input a</text><path d="M380 663 V692" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,688 387,688 380,698" fill="#4E555C"/><polygon points="174,707 625,707 586,767 135,767" fill="#CBF1CF" stroke="#86BF91" stroke-width="2.3"/><text x="380" y="746" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="22">Output &quot;Inserisci il secondo numero&quot;</text><path d="M380 767 V796" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,792 387,792 380,802" fill="#4E555C"/><polygon points="209,811 590,811 551,871 170,871" fill="#CFDFF5" stroke="#91A9C8" stroke-width="2.3"/><text x="380" y="850" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Input b</text><path d="M380 871 V900" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,896 387,896 380,906" fill="#4E555C"/><rect x="170" y="915" width="420" height="60" fill="#FFF5B9" stroke="#C4B576" stroke-width="2.2"/><text x="380" y="954" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">somma = a + b</text><path d="M380 975 V1004" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,1000 387,1000 380,1010" fill="#4E555C"/><polygon points="174,1019 625,1019 586,1079 135,1079" fill="#CBF1CF" stroke="#86BF91" stroke-width="2.3"/><text x="380" y="1058" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="22">Output &quot;Il risultato della somma è&quot;</text><path d="M380 1079 V1108" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,1104 387,1104 380,1114" fill="#4E555C"/><polygon points="209,1123 590,1123 551,1183 170,1183" fill="#CBF1CF" stroke="#86BF91" stroke-width="2.3"/><text x="380" y="1162" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Output somma</text><path d="M380 1183 V1212" stroke="#4E555C" stroke-width="2.4" fill="none"/><polygon points="373,1208 387,1208 380,1218" fill="#4E555C"/><rect x="280" y="1227" width="200" height="60" rx="30" fill="#EED7F5" stroke="#AA88B1" stroke-width="2.5"/><text x="380" y="1266" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">End</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="1145" viewBox="0 0 760 1145">
+  <rect width="760" height="1145" fill="#fff"/>
+  <text x="380" y="50" font-size="26" font-weight="bold" font-family="Arial,Helvetica,sans-serif" fill="#202e3b" text-anchor="middle">La somma con valori inseriti dall'utente</text>
+  <rect x="280" y="83" width="200" height="60" rx="30" fill="#EED7F5" stroke="#AA88B1" stroke-width="2.5"/>
+  <text x="380" y="122" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Main</text>
+  <path d="M380 143 V172" stroke="#4E555C" stroke-width="2.4" fill="none"/>
+  <polygon points="373,168 387,168 380,178" fill="#4E555C"/>
+  <rect x="170" y="187" width="420" height="60" fill="#FFF9C4" stroke="#C2B77C" stroke-width="2.2"/>
+  <line x1="188" y1="187" x2="188" y2="247" stroke="#C2B77C" stroke-width="2.2"/>
+  <text x="380" y="226" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Integer a</text>
+  <path d="M380 247 V276" stroke="#4E555C" stroke-width="2.4" fill="none"/>
+  <polygon points="373,272 387,272 380,282" fill="#4E555C"/>
+  <rect x="170" y="291" width="420" height="60" fill="#FFF9C4" stroke="#C2B77C" stroke-width="2.2"/>
+  <line x1="188" y1="291" x2="188" y2="351" stroke="#C2B77C" stroke-width="2.2"/>
+  <text x="380" y="330" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Integer b</text>
+  <path d="M380 351 V380" stroke="#4E555C" stroke-width="2.4" fill="none"/>
+  <polygon points="373,376 387,376 380,386" fill="#4E555C"/>
+  <rect x="170" y="395" width="420" height="60" fill="#FFF9C4" stroke="#C2B77C" stroke-width="2.2"/>
+  <line x1="188" y1="395" x2="188" y2="455" stroke="#C2B77C" stroke-width="2.2"/>
+  <text x="380" y="434" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Integer somma</text>
+  <path d="M380 455 V484" stroke="#4E555C" stroke-width="2.4" fill="none"/>
+  <polygon points="373,480 387,480 380,490" fill="#4E555C"/>
+  <polygon points="209,499 590,499 551,559 170,559" fill="#CFDFF5" stroke="#91A9C8" stroke-width="2.3"/>
+  <text x="380" y="538" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Input a</text>
+  <path d="M380 559 V588" stroke="#4E555C" stroke-width="2.4" fill="none"/>
+  <polygon points="373,584 387,584 380,594" fill="#4E555C"/>
+  <polygon points="209,603 590,603 551,663 170,663" fill="#CFDFF5" stroke="#91A9C8" stroke-width="2.3"/>
+  <text x="380" y="642" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Input b</text>
+  <path d="M380 663 V692" stroke="#4E555C" stroke-width="2.4" fill="none"/>
+  <polygon points="373,688 387,688 380,698" fill="#4E555C"/>
+  <rect x="170" y="707" width="420" height="60" fill="#FFF5B9" stroke="#C4B576" stroke-width="2.2"/>
+  <text x="380" y="746" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">somma = a + b</text>
+  <path d="M380 767 V796" stroke="#4E555C" stroke-width="2.4" fill="none"/>
+  <polygon points="373,792 387,792 380,802" fill="#4E555C"/>
+  <polygon points="174,811 625,811 586,871 135,871" fill="#CBF1CF" stroke="#86BF91" stroke-width="2.3"/>
+  <text x="380" y="850" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="22">Output &quot;Il risultato della somma è&quot;</text>
+  <path d="M380 871 V900" stroke="#4E555C" stroke-width="2.4" fill="none"/>
+  <polygon points="373,896 387,896 380,906" fill="#4E555C"/>
+  <polygon points="209,915 590,915 551,975 170,975" fill="#CBF1CF" stroke="#86BF91" stroke-width="2.3"/>
+  <text x="380" y="954" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">Output somma</text>
+  <path d="M380 975 V1004" stroke="#4E555C" stroke-width="2.4" fill="none"/>
+  <polygon points="373,1000 387,1000 380,1010" fill="#4E555C"/>
+  <rect x="280" y="1019" width="200" height="60" rx="30" fill="#EED7F5" stroke="#AA88B1" stroke-width="2.5"/>
+  <text x="380" y="1058" fill="#242b2e" font-family="Arial,Helvetica,sans-serif" text-anchor="middle" font-size="26">End</text>
+</svg>

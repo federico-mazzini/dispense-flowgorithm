@@ -1,6 +1,6 @@
 # Dispense di informatica: programmi, diagrammi di flusso e Flowgorithm
 
-Tre dispense Typst con un template comune, organizzate come il progetto di comunicazione di riferimento. Testi e immagini restano dedicati all’informatica; lo stile riprende il riferimento con accenti **blu `#0057b8`** al posto del rosso.
+I sorgenti Typst sono organizzati per argomento, con un file di teoria e uno di esercizi. Il file degli esercizi di Flowgorithm è predisposto per il materiale futuro. Lo stile riprende il progetto di comunicazione di riferimento con accenti **blu `#0057b8`**.
 
 ## Struttura del repository
 
@@ -12,15 +12,14 @@ dispense-flowgorithm/
 │   └── svg/                     # Diagrammi vettoriali
 ├── dist/                        # PDF compilati, esclusi da Git
 ├── scripts/
-│   └── build.sh                 # Compila tutte e tre le dispense
+│   └── build.sh                 # Compila le dispense disponibili
 ├── src/
-│   ├── main.typ                 # Dispensa Flowgorithm
-│   ├── teoria.typ               # Teoria ed esempi svolti
-│   ├── esercizi.typ             # Esercizi sui diagrammi di flusso
-│   └── capitoli/
-│       ├── flowgorithm/         # 5 capitoli
-│       ├── teoria/              # 6 capitoli
-│       └── esercizi/            # 6 sezioni
+│   ├── 1-diagrammi-di-flusso/
+│   │   ├── 1-1-teoria-diagrammi-di-flusso.typ
+│   │   └── 1-2-esercizi.typ
+│   └── 2-flowgorithm/
+│       ├── 2-1-teoria-flowgorithm.typ
+│       └── 2-2-esercizi.typ
 ├── styles/
 │   ├── template.typ             # Font, colori, pagina, titoli e riquadri
 │   └── didattica.typ            # Componenti per i contenuti di informatica
@@ -38,26 +37,27 @@ bash scripts/build.sh
 
 Gli output sono:
 
-- `dist/flowgorithm.pdf`
-- `dist/teoria-diagrammi-flusso.pdf`
-- `dist/esercizi-diagrammi-flusso.pdf`
+- `dist/1-1-teoria-diagrammi-di-flusso.pdf`
+- `dist/1-2-esercizi.pdf`
+- `dist/2-1-teoria-flowgorithm.pdf`
+- `dist/2-2-esercizi.pdf` quando il sorgente degli esercizi di Flowgorithm contiene materiale
 
 Il testo usa **Libertinus Serif**, incluso in Typst, come nel progetto di riferimento. Gli SVG conservano i colori dei blocchi e usano font sans serif: su Ubuntu installare `fonts-liberation` per il testo nei diagrammi; su macOS è disponibile Arial.
 
 Per compilare o aggiornare una singola dispensa:
 
 ```bash
-typst compile --root . src/main.typ dist/flowgorithm.pdf
-typst compile --root . --pdf-standard ua-1 src/teoria.typ dist/teoria-diagrammi-flusso.pdf
-typst compile --root . src/esercizi.typ dist/esercizi-diagrammi-flusso.pdf
-typst watch --root . src/main.typ dist/flowgorithm.pdf
+typst compile --root . --pdf-standard ua-1 src/1-diagrammi-di-flusso/1-1-teoria-diagrammi-di-flusso.typ dist/1-1-teoria-diagrammi-di-flusso.pdf
+typst compile --root . src/1-diagrammi-di-flusso/1-2-esercizi.typ dist/1-2-esercizi.pdf
+typst compile --root . src/2-flowgorithm/2-1-teoria-flowgorithm.typ dist/2-1-teoria-flowgorithm.pdf
+typst watch --root . src/2-flowgorithm/2-1-teoria-flowgorithm.typ dist/2-1-teoria-flowgorithm.pdf
 ```
 
-Lo script elimina i tre output precedenti prima della compilazione e termina al primo errore. `dist/` e `tmp/` sono esclusi da Git.
+Lo script elimina gli output precedenti prima della compilazione e termina al primo errore. `dist/` e `tmp/` sono esclusi da Git.
 
 ## Modificare le dispense
 
-Modificare i capitoli in `src/capitoli/`. Le inclusioni e il loro ordine sono definiti nell’entry point della relativa dispensa. Aggiungere i nuovi capitoli con `#include "capitoli/gruppo/nome.typ"`.
+Modificare i capitoli direttamente nel file Typst della dispensa, nella cartella dell’argomento in `src/`.
 
 Tutte le impostazioni grafiche condivise sono in `styles/template.typ`: A4, margini, Libertinus Serif a 11 pt, gerarchia dei titoli, testatina, numero di pagina, tabelle e riquadri con barra laterale blu. `styles/didattica.typ` adatta allo stesso stile definizioni, richiami, attività di laboratorio e confronti. Per cambiare il colore di tutte le dispense, modificare soltanto `blu` nel template.
 
@@ -65,7 +65,7 @@ Usare `sperimenta` per le attività pratiche che rinforzano la teoria: produce u
 
 Le immagini usano percorsi dalla radice Typst, per esempio `/assets/svg/teoria-diagrammi-flusso/blocco-selezione.svg`. Compilare sempre con `--root .` dalla radice del repository. Dopo una modifica, compilare e controllare visivamente i PDF, in particolare tabelle e diagrammi.
 
-Flowgorithm e teoria usano numerazione automatica dei titoli. La raccolta di esercizi conserva i nomi delle fasi e la numerazione locale degli esercizi. La teoria mantiene indice, collegamenti, segnalibri, lingua italiana, intestazioni delle tabelle, testi alternativi delle immagini ed esportazione **PDF/UA-1**. La compilazione non sostituisce una verifica completa con lettore di schermo.
+Le due dispense di teoria usano la numerazione automatica dei titoli. La teoria di Flowgorithm si conclude con le attività di laboratorio del capitolo 5, «Mettiamo in pratica». Gli esercizi sui diagrammi di flusso conservano i nomi delle fasi e la numerazione locale degli esercizi. La teoria sui diagrammi di flusso mantiene indice, collegamenti, segnalibri, lingua italiana, intestazioni delle tabelle, testi alternativi delle immagini ed esportazione **PDF/UA-1**. La compilazione non sostituisce una verifica completa con lettore di schermo.
 
 ## Commit `[pdf]` e GitHub Actions
 
@@ -75,9 +75,10 @@ Il workflow usa lo stesso `scripts/build.sh` della compilazione locale. Dopo un�
 
 | Artifact | PDF contenuto |
 | --- | --- |
-| `dispense-flowgorithm` | `flowgorithm.pdf` |
-| `dispense-diagrammi-flusso` | `esercizi-diagrammi-flusso.pdf` |
-| `dispense-teoria-diagrammi-flusso` | `teoria-diagrammi-flusso.pdf` |
+| `1-1-teoria-diagrammi-di-flusso` | `1-1-teoria-diagrammi-di-flusso.pdf` |
+| `1-2-esercizi` | `1-2-esercizi.pdf` |
+| `2-1-teoria-flowgorithm` | `2-1-teoria-flowgorithm.pdf` |
+| `2-2-esercizi` | `2-2-esercizi.pdf`, quando disponibile |
 
 Gli artifact sono conservati per 90 giorni, salvo limiti del repository. I PDF non vengono aggiunti automaticamente ai commit.
 

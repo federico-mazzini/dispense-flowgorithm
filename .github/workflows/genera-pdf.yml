@@ -28,24 +28,32 @@ jobs:
           sudo apt-get install --no-install-recommends -y fonts-liberation
       - name: Compila le dispense
         run: bash scripts/build.sh
-      - name: Pubblica il PDF
+      - name: Pubblica il PDF di teoria sui diagrammi di flusso
         uses: actions/upload-artifact@v4
         with:
-          name: dispense-flowgorithm
-          path: dist/flowgorithm.pdf
+          name: 1-1-teoria-diagrammi-di-flusso
+          path: dist/1-1-teoria-diagrammi-di-flusso.pdf
           if-no-files-found: error
           retention-days: 90
-      - name: Pubblica il PDF sui diagrammi di flusso
+      - name: Pubblica il PDF degli esercizi sui diagrammi di flusso
         uses: actions/upload-artifact@v4
         with:
-          name: dispense-diagrammi-flusso
-          path: dist/esercizi-diagrammi-flusso.pdf
+          name: 1-2-esercizi
+          path: dist/1-2-esercizi.pdf
           if-no-files-found: error
           retention-days: 90
-      - name: Pubblica il PDF di teoria
+      - name: Pubblica il PDF di teoria di Flowgorithm
         uses: actions/upload-artifact@v4
         with:
-          name: dispense-teoria-diagrammi-flusso
-          path: dist/teoria-diagrammi-flusso.pdf
+          name: 2-1-teoria-flowgorithm
+          path: dist/2-1-teoria-flowgorithm.pdf
+          if-no-files-found: error
+          retention-days: 90
+      - name: Pubblica il PDF degli esercizi di Flowgorithm
+        if: hashFiles('dist/2-2-esercizi.pdf') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: 2-2-esercizi
+          path: dist/2-2-esercizi.pdf
           if-no-files-found: error
           retention-days: 90
