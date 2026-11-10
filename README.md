@@ -8,8 +8,7 @@ I sorgenti Typst sono organizzati per argomento, con un file di teoria e uno di 
 dispense-flowgorithm/
 ├── .github/workflows/genera-pdf.yml
 ├── assets/
-│   ├── immagini/                # Screenshot e immagini raster
-│   └── svg/                     # Diagrammi vettoriali
+│   └── immagini/                # Screenshot e diagrammi in formato JPG
 ├── dist/                        # PDF compilati, esclusi da Git
 ├── scripts/
 │   └── build.sh                 # Compila le dispense disponibili
@@ -42,7 +41,7 @@ Gli output sono:
 - `dist/2-1-teoria-flowgorithm.pdf`
 - `dist/2-2-esercizi.pdf` quando il sorgente degli esercizi di Flowgorithm contiene materiale
 
-Il testo usa **Libertinus Serif**, incluso in Typst, come nel progetto di riferimento. Gli SVG conservano i colori dei blocchi e usano font sans serif: su Ubuntu installare `fonts-liberation` per il testo nei diagrammi; su macOS è disponibile Arial.
+Il testo usa **Libertinus Serif**, incluso in Typst, come nel progetto di riferimento.
 
 Per compilare o aggiornare una singola dispensa:
 
@@ -63,7 +62,7 @@ Tutte le impostazioni grafiche condivise sono in `styles/template.typ`: A4, marg
 
 Usare `sperimenta` per le attività pratiche che rinforzano la teoria: produce un riquadro blu completo con il titolo “Sperimenta in laboratorio”. Per ora è usato solo nell’attività con l’IA della teoria. Usare `messaggio` per le frasi chiave centrate, senza numerazione né voce nell’indice. Le normali note, definizioni e fasi non hanno barre laterali; `richiamo` resta riservato a pochi avvisi importanti.
 
-Le immagini usano percorsi dalla radice Typst, per esempio `/assets/svg/teoria-diagrammi-flusso/blocco-selezione.svg`. Compilare sempre con `--root .` dalla radice del repository. Dopo una modifica, compilare e controllare visivamente i PDF, in particolare tabelle e diagrammi.
+Le immagini usano percorsi dalla radice Typst, per esempio `/assets/immagini/teoria-diagrammi-flusso/blocco-selezione.jpg`. Compilare sempre con `--root .` dalla radice del repository. Dopo una modifica, compilare e controllare visivamente i PDF, in particolare tabelle e diagrammi.
 
 Le due dispense di teoria usano la numerazione automatica dei titoli. La teoria di Flowgorithm si conclude con le attività di laboratorio del capitolo 5, «Mettiamo in pratica». Gli esercizi sui diagrammi di flusso conservano i nomi delle fasi e la numerazione locale degli esercizi. La teoria sui diagrammi di flusso mantiene indice, collegamenti, segnalibri, lingua italiana, intestazioni delle tabelle, testi alternativi delle immagini ed esportazione **PDF/UA-1**. La compilazione non sostituisce una verifica completa con lettore di schermo.
 

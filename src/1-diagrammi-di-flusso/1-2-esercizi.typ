@@ -317,7 +317,7 @@ Osserva ciascun diagramma di flusso. Per ogni input indicato, segui le frecce e 
 
 == 1. Gatto o cane? — Una condizione
 
-#figura("/assets/svg/diagrammi-flusso/ripasso-01-gatto-cane.svg", 112mm)
+#figura("/assets/immagini/diagrammi-flusso/gatto-cane.jpg", 112mm)
 
 Scrivi l'output per questi input:
 
@@ -329,7 +329,7 @@ Scrivi l'output per questi input:
 #pagebreak()
 == 2. Pizza o pasta? — Calcolo e condizione
 
-#figura("/assets/svg/diagrammi-flusso/ripasso-02-pizza-pasta.svg", 112mm)
+#figura("/assets/immagini/diagrammi-flusso/pizza-pasta.jpg", 112mm)
 
 Scrivi l'output per questi input:
 
@@ -341,7 +341,7 @@ Scrivi l'output per questi input:
 #pagebreak()
 == 3. AFM oppure RIM? — Due condizioni, due output
 
-#figura("/assets/svg/diagrammi-flusso/ripasso-03-afm-rim.svg", 112mm)
+#figura("/assets/immagini/diagrammi-flusso/afm-rim.jpg", 112mm)
 
 Scrivi tutti gli output, nell'ordine, per questi input:
 
@@ -353,7 +353,7 @@ Scrivi tutti gli output, nell'ordine, per questi input:
 #pagebreak()
 == 4. Segui il percorso — Condizioni annidate
 
-#figura("/assets/svg/diagrammi-flusso/ripasso-04-uguali-trabocchetto.svg", 112mm)
+#figura("/assets/immagini/diagrammi-flusso/falsa-uguaglianza.jpg", 112mm)
 
 Scrivi l'output esatto per questi input:
 
@@ -365,7 +365,7 @@ Scrivi l'output esatto per questi input:
 #pagebreak()
 == 5. Sfida finale — Calcoli, più condizioni e più output
 
-#figura("/assets/svg/diagrammi-flusso/ripasso-05-due-output.svg", 112mm)
+#figura("/assets/immagini/diagrammi-flusso/doppio-output.jpg", 112mm)
 
 Scrivi tutti gli output, nell'ordine, per questi input:
 

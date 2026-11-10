@@ -79,9 +79,9 @@ Può includere:
 - Campi in cui inserire informazioni.
 - Testi, immagini e messaggi di risposta.
 
-#figura("/assets/immagini/teoria-diagrammi-flusso/Screenshot_2026-10-21_alle_01.36.10.png", 105mm, alt: "Due schermate di accesso: la seconda distingue il pulsante principale dalle azioni secondarie usando colore e contorno.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/schermate-accesso.jpg", 105mm, alt: "Due schermate di accesso: la seconda distingue il pulsante principale dalle azioni secondarie usando colore e contorno.")
 
-#figura("/assets/immagini/teoria-diagrammi-flusso/Screenshot_2026-10-21_alle_01.36.00.png", 105mm, alt: "Interfacce di Spotify e Apple Music: menu, immagini, titoli e controlli permettono di scegliere e ascoltare musica.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/interfacce-musicali.jpg", 105mm, alt: "Interfacce di Spotify e Apple Music: menu, immagini, titoli e controlli permettono di scegliere e ascoltare musica.")
 
 #nota[
 
@@ -476,7 +476,7 @@ Un *diagramma di flusso* rappresenta graficamente i passaggi necessari per risol
 === Inizio e Fine — forma ovale
 
 #simbolo([
-#figura("/assets/svg/teoria-diagrammi-flusso/blocco_start_fine.svg", 48mm, alt: "Diagramma: INIZIO / FINE; Forma ovale.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/inizio-fine.jpg", 48mm, alt: "Diagramma: INIZIO / FINE; Forma ovale.")
 ], [
 Il blocco *Start/Fine* indica dove comincia e dove termina il diagramma.
 
@@ -489,7 +489,7 @@ Il blocco *Start/Fine* indica dove comincia e dove termina il diagramma.
 === Input e Output — forma a parallelogramma
 
 #simbolo([
-#figura("/assets/svg/teoria-diagrammi-flusso/blocco_input_output.svg", 48mm, alt: "Diagramma: INPUT / OUTPUT; Forma: parallelogramma.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/input-output.jpg", 48mm, alt: "Diagramma: INPUT / OUTPUT; Forma: parallelogramma.")
 ], [
 Il parallelogramma rappresenta un'operazione di *ingresso o uscita dei dati*.
 
@@ -502,7 +502,7 @@ Il parallelogramma rappresenta un'operazione di *ingresso o uscita dei dati*.
 === Elaborazione — forma rettangolare
 
 #simbolo([
-#figura("/assets/svg/teoria-diagrammi-flusso/blocco_elaborazione.svg", 48mm, alt: "Diagramma: ELABORAZIONE; Forma: rettangolo.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/blocco-elaborazione.jpg", 48mm, alt: "Diagramma: ELABORAZIONE; Forma: rettangolo.")
 ], [
 Il rettangolo rappresenta un'*operazione eseguita sui dati*, per esempio un calcolo.
 
@@ -526,7 +526,7 @@ Riprendiamo il problema dell'area del quadrato: il programma legge la misura del
 
 ]
 
-#figura("/assets/svg/teoria-diagrammi-flusso/diagramma-area-quadrato-blocchi-fondamentali.svg", 100mm, alt: "Diagramma: Area di un quadrato; INIZIO; Leggi lato; area = lato × lato; Mostra area; FINE; Ovale: inizio/fine · Parallelogramma: input/output; Rettangolo: elaborazione · Frecce: ordine dei passaggi.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/quadrato-guidato.jpg", 100mm, alt: "Diagramma: Area di un quadrato; INIZIO; Leggi lato; area = lato × lato; Mostra area; FINE; Ovale: inizio/fine · Parallelogramma: input/output; Rettangolo: elaborazione · Frecce: ordine dei passaggi.")
 
 
 #didascalia[Ovale: inizio/fine · Parallelogramma: input/output \ Rettangolo: elaborazione · Frecce: ordine dei passaggi]
@@ -583,7 +583,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 === Scriviamo il diagramma
 
-#figura("/assets/svg/teoria-diagrammi-flusso/diagramma-area-quadrato.svg", 100mm, alt: "Diagramma: Area di un quadrato; INIZIO; Leggi lato; area = lato × lato; Mostra area; FINE; Le frecce indicano l'ordine dei passaggi..")
+#figura("/assets/immagini/teoria-diagrammi-flusso/area-quadrato.jpg", 100mm, alt: "Diagramma: Area di un quadrato; INIZIO; Leggi lato; area = lato × lato; Mostra area; FINE; Le frecce indicano l'ordine dei passaggi..")
 
 #didascalia[Diagramma di flusso per calcolare l'area di un quadrato]
 
@@ -615,7 +615,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 === Scriviamo il diagramma
 
-#figura("/assets/svg/teoria-diagrammi-flusso/diagramma-somma-due-numeri.svg", 100mm, alt: "Diagramma: Somma di due numeri; INIZIO; Leggi numero1; Leggi numero2; somma = numero1 + numero2; Mostra somma; FINE; Prima si acquisiscono entrambi i numeri, poi si calcola la somma..")
+#figura("/assets/immagini/teoria-diagrammi-flusso/somma-numeri.jpg", 100mm, alt: "Diagramma: Somma di due numeri; INIZIO; Leggi numero1; Leggi numero2; somma = numero1 + numero2; Mostra somma; FINE; Prima si acquisiscono entrambi i numeri, poi si calcola la somma..")
 
 #didascalia[Diagramma di flusso per calcolare la somma di due numeri]
 
@@ -647,7 +647,7 @@ In questa pagina trovi tre esempi svolti. Per ciascun problema partiamo dai dati
 
 === Scriviamo il diagramma
 
-#figura("/assets/immagini/teoria-diagrammi-flusso/811b4a36-f356-4fe2-8818-45ca1ea99374.png", 100mm, alt: "Inizio; leggi prezzo; sconto = prezzo × 10 / 100; prezzo_finale = prezzo − sconto; mostra prezzo_finale; fine. Questo diagramma applica uno sconto fisso del 10%.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/sconto-fisso.jpg", 100mm, alt: "Inizio; leggi prezzo; sconto = prezzo × 10 / 100; prezzo_finale = prezzo − sconto; mostra prezzo_finale; fine. Questo diagramma applica uno sconto fisso del 10%.")
 #richiamo[*Nota sul diagramma:* qui la percentuale è fissata al 10%. Per il caso generale descritto nel testo occorre leggere anche la percentuale e usarla al posto di 10 nel calcolo.]
 
 #nota[*Da ricordare:* il prezzo e la percentuale sono entrambi input. Se il prezzo è 23 € e la percentuale è 10, lo sconto è 2,30 € e il prezzo finale è 20,70 €.
@@ -722,7 +722,7 @@ Il programma segue *una sola delle due strade* ogni volta che incontra il rombo.
 
 Le due strade possono portare a operazioni o messaggi diversi e, in seguito, anche ricongiungersi.
 
-#figura("/assets/svg/teoria-diagrammi-flusso/rombo-condizione-si-no.svg", 100mm, alt: "Diagramma: condizione; SÌ; NO.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/rombo-condizione.jpg", 100mm, alt: "Diagramma: condizione; SÌ; NO.")
 
 #pagebreak()
 == Che cos'è la condizione in un blocco di selezione?
@@ -758,7 +758,7 @@ Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. S
 ]
 
 
-#figura("/assets/svg/teoria-diagrammi-flusso/rombo-numero-positivo.svg", 100mm, alt: "Rombo con la condizione numero > 0?; ramo SÌ se il numero è maggiore di zero; ramo NO altrimenti.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/numero-positivo.jpg", 100mm, alt: "Rombo con la condizione numero > 0?; ramo SÌ se il numero è maggiore di zero; ramo NO altrimenti.")
 
 #pagebreak()
 == Esempio svolto — Un numero è positivo?
@@ -783,7 +783,7 @@ Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. S
 
 === Diagramma di flusso
 
-#figura("/assets/svg/teoria-diagrammi-flusso/diagramma-numero-positivo-con-input.svg", 100mm, alt: "Diagramma: INIZIO; Leggi numero; numero > 0?; SÌ; NO; Mostra “Il numero è positivo”; Mostra “Il numero non è positivo”; FINE.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/verifica-positivita.jpg", 100mm, alt: "Diagramma: INIZIO; Leggi numero; numero > 0?; SÌ; NO; Mostra “Il numero è positivo”; Mostra “Il numero non è positivo”; FINE.")
 
 #didascalia[Diagramma di flusso: numero positivo]
 
@@ -814,7 +814,7 @@ Per esempio, se `numero = 4`, alla domanda `numero > 0?` la risposta è *SÌ*. S
 
 === Diagramma di flusso
 
-#figura("/assets/svg/teoria-diagrammi-flusso/diagramma-eta-maggiorenne-con-input.svg", 100mm, alt: "Diagramma: INIZIO; Leggi eta; eta >= 18?; SÌ; NO; Mostra “Puoi entrare”; Mostra “Non puoi entrare”; FINE.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/verifica-maggioreta.jpg", 100mm, alt: "Diagramma: INIZIO; Leggi eta; eta >= 18?; SÌ; NO; Mostra “Puoi entrare”; Mostra “Non puoi entrare”; FINE.")
 
 #didascalia[Diagramma di flusso: età almeno 18 anni]
 
@@ -880,7 +880,7 @@ Per questo usiamo una seconda selezione nel percorso NO della prima:
 #pagebreak()
 === Diagramma di flusso svolto
 
-#figura("/assets/svg/teoria-diagrammi-flusso/confronto-due-numeri.svg", 135mm, alt: "Diagramma: INIZIO; Leggi i due numeri; a e b; a > b?; SÌ; a è maggiore di b; NO; a < b?; SÌ; b è maggiore di a; NO; a e b sono uguali; FINE.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/confronto-numeri.jpg", 135mm, alt: "Diagramma: INIZIO; Leggi i due numeri; a e b; a > b?; SÌ; a è maggiore di b; NO; a < b?; SÌ; b è maggiore di a; NO; a e b sono uguali; FINE.")
 
 === Proviamo con alcuni valori
 
@@ -908,9 +908,9 @@ Per questo usiamo una seconda selezione nel percorso NO della prima:
 #pagebreak()
 === Non solo matematica :)
 
-#figura("/assets/immagini/teoria-diagrammi-flusso/bb02bbf0-04ec-4d29-887f-6bb388fbf5e7.png", 100mm, alt: "Diagramma umoristico in inglese: hai un problema? Se no, non preoccuparti. Se sì, puoi fare qualcosa? In entrambi i casi conclude: non preoccuparti.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/preoccupazione.jpg", 100mm, alt: "Diagramma umoristico in inglese: hai un problema? Se no, non preoccuparti. Se sì, puoi fare qualcosa? In entrambi i casi conclude: non preoccuparti.")
 
-#figura("/assets/immagini/teoria-diagrammi-flusso/image.png", 82mm, alt: "Diagramma umoristico in inglese: dovresti dirlo ad alta voce? Una serie di decisioni sul contesto, sulle persone presenti e sulle conseguenze porta a parlare oppure tacere.")
+#figura("/assets/immagini/teoria-diagrammi-flusso/parlare-tacere.jpg", 82mm, alt: "Diagramma umoristico in inglese: dovresti dirlo ad alta voce? Una serie di decisioni sul contesto, sulle persone presenti e sulle conseguenze porta a parlare oppure tacere.")
 
 
 *Ripasso:* #link(<cap2>)[Input, elaborazione e output] · #link(<cap3>)[I blocchi fondamentali] · #link(<cap4>)[Esempi svolti]

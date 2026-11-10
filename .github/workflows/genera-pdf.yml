@@ -22,10 +22,6 @@ jobs:
         uses: typst-community/setup-typst@v5
         with:
           typst-version: '0.15.1'
-      - name: Installa i font dei diagrammi
-        run: |
-          sudo apt-get update
-          sudo apt-get install --no-install-recommends -y fonts-liberation
       - name: Compila le dispense
         run: bash scripts/build.sh
       - name: Pubblica il PDF di teoria sui diagrammi di flusso
