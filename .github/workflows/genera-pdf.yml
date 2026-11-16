@@ -53,3 +53,27 @@ jobs:
           path: dist/2-2-esercizi.pdf
           if-no-files-found: error
           retention-days: 90
+      - name: Prepara i PDF per GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  pubblica:
+    name: Pubblica i PDF su GitHub Pages
+    needs: genera-pdf
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: github-pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Pubblica su GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
