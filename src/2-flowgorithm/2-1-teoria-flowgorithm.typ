@@ -576,3 +576,237 @@ Realizzare un programma che gestisca il riscaldamento automatico di una casa. Se
 
 Realizzare un programma che calcoli il prezzo di una prenotazione in hotel. Una camera costa 80 € a notte. Se il cliente soggiorna almeno 5 notti, riceve uno sconto del 10% sul soggiorno. Se prenota almeno 30 giorni prima dell'arrivo, riceve un ulteriore sconto del 5%, calcolato sul prezzo già eventualmente scontato. Durante il fine settimana (sabato o domenica), viene invece applicato un supplemento fisso di 15 € per ogni notte del soggiorno. Il programma deve calcolare il totale applicando correttamente tutte le condizioni.
 ]
+
+#pagebreak()
+
+= Calcolare l’interesse con Flowgorithm
+
+=== Che cos’è l’interesse?
+
+L’*interesse* è il compenso che spetta a chi concede l’utilizzo di una somma di denaro per un certo periodo. La somma iniziale si chiama *capitale*. Nel calcolo dell’*interesse semplice*, l’interesse si calcola sempre sul capitale iniziale.
+
+=== Gli elementi del calcolo
+
+#table(
+  columns: (20%, 80%),
+  table.header([*Simbolo*], [*Significato*]),
+  [$C$], [Capitale iniziale: somma prestata o depositata, in euro.],
+  [$r$], [Tasso percentuale annuo: interesse maturato in un anno ogni 100 euro di capitale.],
+  [$t$ / $m$ / $g$], [Tempo espresso rispettivamente in anni, mesi o giorni.],
+  [$I$], [Interesse maturato, in euro.],
+)
+
+=== Calcolo dell’interesse: formule dirette
+
+Si usano quando conosciamo il *capitale*, il *tasso* e il *tempo* e dobbiamo calcolare l’interesse.
+
+#table(
+  columns: (55%, 45%),
+  table.header([*Tempo*], [*Formula dell’interesse*]),
+  [Anni], [$ I = frac(C times r times t, 100) $],
+  [Mesi], [$ I = frac(C times r times m, 1 thin 200) $],
+  [Giorni: anno civile ordinario], [$ I = frac(C times r times g, 36 thin 500) $],
+  [Giorni: anno civile bisestile], [$ I = frac(C times r times g, 36 thin 600) $],
+  [Giorni: anno commerciale], [$ I = frac(C times r times g, 36 thin 000) $],
+)
+
+Il tasso indica la percentuale di interesse riferita a un anno. Scegliere la formula in base al tempo espresso in anni, mesi o giorni. Nelle formule riportate, un tasso del *3%* si indica con il numero *3*: la divisione per 100 è già compresa nella formula.
+
+#pagebreak()
+
+#[
+#set par(leading: 0.7em, spacing: 1em)
+
+== Interesse con il tempo in anni
+
+Realizzare in Flowgorithm un programma che calcoli gli interessi di un’operazione di credito (prestito). L’utente deve poter inserire il capitale, il tasso percentuale annuo e il tempo espresso in anni.
+
+Il programma deve:
+
+ - chiedere all’utente i dati da inserire, essendo chiaro nelle richieste;
+ - calcolare l’interesse;
+ - comunicare l’interesse in euro.
+
+Testare il programma creato con dati di test e verificarne la correttezza.
+
+#v(1fr)
+
+== Interesse in giorni: scegliere il tipo di anno
+
+Realizzare in Flowgorithm un programma che calcoli gli interessi di un’operazione di credito (prestito). L’utente deve poter inserire il capitale, il tasso percentuale annuo e il tempo espresso in giorni.
+
+Il programma deve:
+
+ - chiedere all’utente i dati da inserire, essendo chiaro nelle richieste;
+ - permettere all’utente di scegliere il tipo di anno: commerciale, civile ordinario o civile bisestile;
+ - calcolare l’interesse in base al tipo di anno scelto;
+ - comunicare l’interesse in euro.
+
+Testare il programma creato con dati di test e verificarne la correttezza per ciascun tipo di anno.
+
+#v(1fr)
+
+== Il calcolatore completo dell’interesse
+
+Realizzare in Flowgorithm un programma che calcoli gli interessi di un’operazione di credito (prestito). L’utente deve poter inserire il capitale e il tasso percentuale annuo e scegliere se esprimere il tempo in anni, mesi o giorni.
+
+Il programma deve:
+
+ - chiedere all’utente i dati da inserire, essendo chiaro nelle richieste;
+ - permettere all’utente di scegliere l’unità di tempo e inserire la durata;
+ - chiedere il tipo di anno, commerciale, civile ordinario o civile bisestile, soltanto se il tempo è espresso in giorni;
+ - calcolare l’interesse in base alle scelte effettuate;
+ - comunicare l’interesse in euro.
+
+Testare il programma creato con dati di test e verificarne la correttezza per tutte le scelte previste.
+]
+
+#pagebreak()
+
+= La biglietteria del Museo Baracca
+
+=== Un programma per la biglietteria
+
+Al *Museo Baracca di Lugo* hanno bisogno di un programma per la biglietteria. Il personale deve poter inserire il numero di biglietti richiesti per ciascuna tipologia e conoscere il totale da far pagare ai visitatori. Il programma dovrà tenere conto dello sconto gruppo e dell’eventuale visita guidata.
+
+Le tariffe sono le seguenti.
+
+=== Le tipologie di biglietto
+
+#table(
+  columns: (60%, 40%),
+  table.header([*Tipo di biglietto*], [*Prezzo per persona*]),
+  [Intero], [10 €],
+  [Ridotto], [7 €],
+  [Over 65], [5 €],
+)
+
+In biglietteria il cassiere indica il numero di biglietti acquistati per ciascuna tipologia. Può indicare *0* se non ce ne sono. Il prezzo finale dipende dal numero totale dei biglietti e dalle tipologie acquistate.
+
+=== Lo sconto gruppo
+
+Se il numero totale di biglietti acquistati è *esattamente 5*, viene applicato uno *sconto del 10%* sul costo complessivo dei biglietti, indipendentemente dalle tipologie scelte. Negli altri casi non viene applicato lo sconto.
+
+=== La visita guidata
+
+Chi acquista può scegliere di aggiungere una visita guidata. Il servizio costa *50 € complessivi per il gruppo*, non per ogni persona.
+
+Il costo della visita guidata viene aggiunto al prezzo dei biglietti *dopo l’eventuale sconto gruppo*. Lo sconto riguarda soltanto i biglietti e non si applica ai 50 € della visita guidata.
+
+#pagebreak()
+
+#[
+#set par(leading: 0.7em, spacing: 1em)
+
+== Acquistare i biglietti
+
+Realizzare in Flowgorithm un programma che calcoli il costo dei biglietti per una visita al Museo Baracca di Lugo. L’utente deve poter inserire il numero di biglietti interi, ridotti e over 65.
+
+Il programma deve:
+
+ - chiedere all’utente il numero di biglietti per ciascuna tipologia, essendo chiaro nelle richieste;
+ - calcolare il costo totale dei biglietti utilizzando le tariffe indicate;
+ - comunicare il totale da pagare in euro.
+
+Testare il programma creato con dati di test e verificarne la correttezza.
+
+#v(1fr)
+
+== Applicare lo sconto gruppo
+
+Realizzare in Flowgorithm un programma che calcoli il costo dei biglietti per una visita al Museo Baracca di Lugo, applicando lo sconto gruppo. L’utente deve poter inserire il numero di biglietti interi, ridotti e over 65.
+
+Il programma deve:
+
+ - chiedere all’utente il numero di biglietti per ciascuna tipologia, essendo chiaro nelle richieste;
+ - calcolare il numero totale dei biglietti e il loro costo complessivo;
+ - applicare lo sconto del 10% se i biglietti sono esattamente 5;
+ - comunicare il totale da pagare in euro.
+
+Testare il programma creato con dati di test e verificarne la correttezza sia con lo sconto sia senza.
+
+#v(1fr)
+
+== Aggiungere la visita guidata
+
+Realizzare in Flowgorithm un programma che calcoli il costo di una visita al Museo Baracca di Lugo, mantenendo lo sconto gruppo e aggiungendo la possibilità di prenotare una visita guidata.
+
+Il programma deve:
+
+ - chiedere all’utente il numero di biglietti interi, ridotti e over 65, essendo chiaro nelle richieste;
+ - calcolare il costo dei biglietti e applicare lo sconto del 10% se sono esattamente 5;
+ - chiedere all’utente se desidera la visita guidata;
+ - aggiungere 50 € al costo dei biglietti, dopo l’eventuale sconto, se viene richiesta la visita guidata;
+ - comunicare il totale da pagare in euro.
+
+Testare il programma creato con dati di test e verificarne la correttezza per tutte le combinazioni di sconto e visita guidata.
+]
+
+#pagebreak()
+
+= Il bar della scuola
+
+=== Un programma per il bar
+
+Al *bar della scuola* hanno bisogno di un programma che calcoli il totale da pagare per un ordine. Chi usa il programma deve poter indicare quanti prodotti vengono acquistati per ciascuna tipologia.
+
+=== Il listino
+
+#table(
+  columns: (60%, 40%),
+  table.header([*Prodotto*], [*Prezzo unitario*]),
+  [Toast], [2,00 €],
+  [Bibita], [2,00 €],
+  [Acqua], [1,00 €],
+  [M&M’s], [1,50 €],
+  [KitKat], [1,50 €],
+  [Panino con cotoletta], [2,50 €],
+)
+
+Per ogni prodotto si indica la quantità acquistata. Se un prodotto non viene acquistato, si indica *0*.
+
+== Calcolare il totale dell’ordine
+
+Realizzare in Flowgorithm un programma che calcoli il costo di un ordine al bar della scuola. L’utente deve poter inserire quanti toast, bibite, bottiglie d’acqua, confezioni di M&M’s, KitKat e panini con cotoletta vengono acquistati.
+
+Il programma deve:
+
+ - chiedere all’utente la quantità acquistata di ciascun prodotto, essendo chiaro nelle richieste;
+ - calcolare il costo totale dell’ordine utilizzando i prezzi del listino;
+ - comunicare il totale da pagare in euro.
+
+Testare il programma creato con dati di test e verificarne la correttezza.
+
+#pagebreak()
+
+== Gestire più ordini
+
+Realizzare in Flowgorithm un programma che permetta al bar della scuola di gestire più ordini consecutivi. Per ogni ordine, l’utente deve poter inserire la quantità acquistata di ciascun prodotto del listino.
+
+Il programma deve:
+
+ - chiedere all’utente la quantità acquistata di ciascun prodotto, essendo chiaro nelle richieste;
+ - calcolare e comunicare il totale dell’ordine in euro;
+ - chiedere se si vuole inserire un nuovo ordine;
+ - ricominciare se la risposta è sì, senza includere gli importi degli ordini precedenti;
+ - terminare se la risposta è no.
+
+Testare il programma creato con dati di test e verificarne la correttezza sia con un solo ordine sia con più ordini consecutivi.
+
+#v(1fr)
+
+== Comporre un ordine dal listino
+
+Realizzare in Flowgorithm un programma che permetta di comporre un ordine al bar della scuola scegliendo un prodotto alla volta. L’utente deve poter aggiungere prodotti fino a quando sceglie «Termina ordine».
+
+Il programma deve:
+
+ - mostrare un menu con i sei prodotti del listino e la voce «Termina ordine»;
+ - chiedere all’utente quale prodotto desidera aggiungere e in quale quantità;
+ - aggiungere il costo dei prodotti scelti al totale dell’ordine;
+ - permettere di scegliere altri prodotti, anche uno già inserito;
+ - comunicare il totale da pagare in euro e terminare quando viene scelta la voce «Termina ordine», senza chiedere una quantità per questa voce.
+
+Testare il programma creato con dati di test e verificarne la correttezza con prodotti diversi, con lo stesso prodotto scelto più volte e terminando senza acquistare prodotti.
+
+#v(1fr)
