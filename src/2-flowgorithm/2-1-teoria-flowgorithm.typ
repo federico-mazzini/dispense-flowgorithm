@@ -507,77 +507,14 @@ Realizza in Flowgorithm un programma che chieda i voti di *italiano, matematica 
  + Prova il programma con voti che producano una media *inferiore a 6*, *uguale a 6* e *superiore a 6*. Verifica i risultati senza modificare il diagramma.
 ]
 
-#pagebreak()
-
-= Esercizi sulle condizioni
-
-#block(sticky: true)[#etichetta[Condizioni semplici]]
-
-#esercizio[
-== Bolletta elettrica
-
-Realizzare un programma che calcoli il costo di una bolletta elettrica. I primi 200 kWh consumati costano 0,25 € ciascuno, mentre i consumi oltre 200 kWh costano 0,35 € per ogni kWh aggiuntivo. Il programma deve chiedere il consumo e comunicare il costo totale.
+#page(header: none, footer: none)[
+  #align(center + horizon)[
+    #text(size: 40pt, weight: "bold", fill: blu)[Esercizi]
+  ]
 ]
 
-#esercizio[
-== Autonomia di un'auto elettrica
-
-Realizzare un programma che verifichi se la batteria di un'auto elettrica è sufficiente per raggiungere una destinazione. Il programma deve chiedere l'autonomia massima dell'auto, la percentuale di batteria disponibile e la distanza da percorrere. Deve comunicare se è possibile completare il viaggio e quanti chilometri di autonomia rimangono oppure mancano.
-]
-
-#esercizio[
-== Prenotazione di un concerto
-
-Realizzare un programma che gestisca la prenotazione di posti per un concerto. Il programma deve conoscere la capienza massima del locale, il numero di posti già occupati e il numero di biglietti richiesti. Deve stabilire se la prenotazione può essere accettata e comunicare il numero di posti ancora disponibili.
-]
-
-
-#block(sticky: true)[#etichetta[Condizioni composte]]
-
-#esercizio[
-== Concorso scolastico
-
-Realizzare un programma che stabilisca se uno studente può partecipare a un concorso scolastico. Per essere ammesso deve avere una media di almeno 8 e non più di 10 assenze. Il programma deve comunicare se lo studente soddisfa i requisiti.
-]
-
-#esercizio[
-== Iscrizione a una gara sportiva
-
-Realizzare un programma che gestisca le iscrizioni a una gara sportiva. Possono iscriversi soltanto persone con un'età compresa tra 16 e 25 anni, estremi inclusi, e in possesso di un certificato medico valido. Il programma deve verificare i requisiti e comunicare se l'iscrizione è consentita.
-]
-
-#esercizio[
-== Ordine online
-
-Realizzare un programma che calcoli il costo finale di un ordine online. La spedizione costa 6 €, ma è gratuita se l'ordine raggiunge almeno 80 € oppure se il cliente possiede un abbonamento Premium. Se il prodotto è fragile, viene aggiunto un supplemento di imballaggio di 5 €, indipendentemente dalle spese di spedizione.
-]
-
-#esercizio[
-== Noleggio di un'automobile
-
-Realizzare un programma che stabilisca se una persona può noleggiare un'automobile. Il noleggio è consentito soltanto a chi ha almeno 21 anni e possiede la patente da almeno 2 anni. Se il conducente ha meno di 25 anni, viene applicato un supplemento di 8 € al giorno. Il programma deve chiedere i dati necessari e calcolare il costo totale del noleggio, conoscendo la tariffa giornaliera e la durata.
-]
-
-
-#esercizio[
-== Biglietto del cinema
-
-Realizzare un programma che calcoli il prezzo di un biglietto del cinema. Il biglietto intero costa 12 €, mentre i minori di 14 anni e le persone di almeno 65 anni pagano 8 €. Il mercoledì tutti pagano 7 €, indipendentemente dall'età. Il programma deve applicare la tariffa corretta e comunicarla all'utente.
-]
-
-#esercizio[
-== Riscaldamento automatico
-
-Realizzare un programma che gestisca il riscaldamento automatico di una casa. Se la temperatura è inferiore a 18 °C e qualcuno è in casa, il riscaldamento deve accendersi. Se la temperatura scende sotto i 5 °C, deve accendersi comunque, anche quando la casa è vuota, per evitare il congelamento delle tubature. Negli altri casi deve rimanere spento. Il programma deve comunicare lo stato del riscaldamento.
-]
-
-#esercizio[
-== Prenotazione in hotel
-
-Realizzare un programma che calcoli il prezzo di una prenotazione in hotel. Una camera costa 80 € a notte. Se il cliente soggiorna almeno 5 notti, riceve uno sconto del 10% sul soggiorno. Se prenota almeno 30 giorni prima dell'arrivo, riceve un ulteriore sconto del 5%, calcolato sul prezzo già eventualmente scontato. Durante il fine settimana (sabato o domenica), viene invece applicato un supplemento fisso di 15 € per ogni notte del soggiorno. Il programma deve calcolare il totale applicando correttamente tutte le condizioni.
-]
-
-#pagebreak()
+// La sezione degli esercizi ha una numerazione autonoma.
+#counter(heading).update(0)
 
 = Calcolare l’interesse con Flowgorithm
 
@@ -629,7 +566,7 @@ Il programma deve:
 
 Testare il programma creato con dati di test e verificarne la correttezza.
 
-#v(1fr)
+#v(1cm)
 
 == Interesse in giorni: scegliere il tipo di anno
 
@@ -644,7 +581,7 @@ Il programma deve:
 
 Testare il programma creato con dati di test e verificarne la correttezza per ciascun tipo di anno.
 
-#v(1fr)
+#v(1cm)
 
 == Il calcolatore completo dell’interesse
 
@@ -710,7 +647,7 @@ Il programma deve:
 
 Testare il programma creato con dati di test e verificarne la correttezza.
 
-#v(1fr)
+#v(1cm)
 
 == Applicare lo sconto gruppo
 
@@ -725,7 +662,7 @@ Il programma deve:
 
 Testare il programma creato con dati di test e verificarne la correttezza sia con lo sconto sia senza.
 
-#v(1fr)
+#v(1cm)
 
 == Aggiungere la visita guidata
 
@@ -746,9 +683,9 @@ Testare il programma creato con dati di test e verificarne la correttezza per tu
 
 = Il bar della scuola
 
-=== Un programma per il bar
+=== Un programma per la lista bar
 
-Al *bar della scuola* hanno bisogno di un programma che calcoli il totale da pagare per un ordine. Chi usa il programma deve poter indicare quanti prodotti vengono acquistati per ciascuna tipologia.
+Gli studenti della classe raccolgono le richieste dei compagni e preparano la *lista bar*: un elenco dei prodotti da acquistare al bar della scuola. Hanno bisogno di un programma che li aiuti a compilare la lista e a calcolare il totale da pagare, inserendo la quantità richiesta per ciascun prodotto.
 
 === Il listino
 
@@ -763,7 +700,9 @@ Al *bar della scuola* hanno bisogno di un programma che calcoli il totale da pag
   [Panino con cotoletta], [2,50 €],
 )
 
-Per ogni prodotto si indica la quantità acquistata. Se un prodotto non viene acquistato, si indica *0*.
+Per ogni prodotto si indica la quantità da inserire nella lista bar. Se un prodotto non viene richiesto, si indica *0*.
+
+#pagebreak()
 
 == Calcolare il totale dell’ordine
 
@@ -777,7 +716,7 @@ Il programma deve:
 
 Testare il programma creato con dati di test e verificarne la correttezza.
 
-#pagebreak()
+#v(1cm)
 
 == Gestire più ordini
 
@@ -793,7 +732,7 @@ Il programma deve:
 
 Testare il programma creato con dati di test e verificarne la correttezza sia con un solo ordine sia con più ordini consecutivi.
 
-#v(1fr)
+#v(1cm)
 
 == Comporre un ordine dal listino
 
@@ -808,5 +747,3 @@ Il programma deve:
  - comunicare il totale da pagare in euro e terminare quando viene scelta la voce «Termina ordine», senza chiedere una quantità per questa voce.
 
 Testare il programma creato con dati di test e verificarne la correttezza con prodotti diversi, con lo stesso prodotto scelto più volte e terminando senza acquistare prodotti.
-
-#v(1fr)
