@@ -1,6 +1,6 @@
 # Dispense di informatica
 
-[**Dispense Flowgorithm**](https://federico-mazzini.github.io/dispense-flowgorithm/2-1-teoria-flowgorithm.pdf) · [**Dispense diagrammi di flusso**](https://federico-mazzini.github.io/dispense-flowgorithm/1-1-teoria-diagrammi-di-flusso.pdf)
+[**1. Programmi e algoritmi**](https://federico-mazzini.github.io/dispense-flowgorithm/1-1-teoria-programmi-e-algoritmi.pdf) · [**2. Diagrammi di flusso**](https://federico-mazzini.github.io/dispense-flowgorithm/2-1-teoria-diagrammi-di-flusso.pdf) · [**3. Flowgorithm**](https://federico-mazzini.github.io/dispense-flowgorithm/3-1-teoria-flowgorithm.pdf)
 
 Ultime versioni pubblicate per la classe.
 

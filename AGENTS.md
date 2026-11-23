@@ -1,8 +1,8 @@
 # Istruzioni operative per l’agente
 
-I sorgenti Typst sono organizzati per argomento, con un file di teoria e uno di esercizi. Il file degli esercizi di Flowgorithm è predisposto per il materiale futuro. Lo stile riprende il progetto di comunicazione di riferimento con accenti **blu `#0057b8`**.
+I sorgenti Typst sono organizzati per argomento, con un file di teoria e, dove presente, uno di esercizi. La sequenza è: 1 programmi e algoritmi, 2 diagrammi di flusso, 3 Flowgorithm. Il file degli esercizi di Flowgorithm è predisposto per il materiale futuro. Lo stile riprende il progetto di comunicazione di riferimento con accenti **blu `#0057b8`**.
 
-Il `README.md` è destinato alla classe e contiene soltanto i due collegamenti alle dispense pubblicate. Conservare in questo file le istruzioni operative per lavorare al repository.
+Il `README.md` è destinato alla classe e contiene i tre collegamenti alle dispense pubblicate e, su richiesta del docente, la traccia «Next step» del futuro capitolo 6 sui cicli. Conservare in questo file le istruzioni operative per lavorare al repository.
 
 ## Struttura del repository
 
@@ -17,12 +17,14 @@ dispense-flowgorithm/
 │   ├── watch.sh                 # Avvia la ricompilazione al salvataggio
 │   └── watch.py                 # Controlla periodicamente le modifiche
 ├── src/
-│   ├── 1-diagrammi-di-flusso/
-│   │   ├── 1-1-teoria-diagrammi-di-flusso.typ
-│   │   └── 1-2-esercizi.typ
-│   └── 2-flowgorithm/
-│       ├── 2-1-teoria-flowgorithm.typ
-│       └── 2-2-esercizi.typ
+│   ├── 1-programmi-e-algoritmi/
+│   │   └── 1-1-teoria-programmi-e-algoritmi.typ
+│   ├── 2-diagrammi-di-flusso/
+│   │   ├── 2-1-teoria-diagrammi-di-flusso.typ
+│   │   └── 2-2-esercizi.typ
+│   └── 3-flowgorithm/
+│       ├── 3-1-teoria-flowgorithm.typ
+│       └── 3-2-esercizi.typ
 ├── styles/
 │   ├── template.typ             # Font, colori, pagina, titoli e riquadri
 │   └── didattica.typ            # Componenti per i contenuti di informatica
@@ -41,20 +43,22 @@ bash scripts/build.sh
 
 Gli output sono:
 
-- `dist/1-1-teoria-diagrammi-di-flusso.pdf`
-- `dist/1-2-esercizi.pdf`
-- `dist/2-1-teoria-flowgorithm.pdf`
-- `dist/2-2-esercizi.pdf` quando il sorgente degli esercizi di Flowgorithm contiene materiale
+- `dist/1-1-teoria-programmi-e-algoritmi.pdf`
+- `dist/2-1-teoria-diagrammi-di-flusso.pdf`
+- `dist/2-2-esercizi.pdf`
+- `dist/3-1-teoria-flowgorithm.pdf`
+- `dist/3-2-esercizi.pdf` quando il sorgente degli esercizi di Flowgorithm contiene materiale
 
 Il testo usa **Libertinus Serif**, incluso in Typst, come nel progetto di riferimento.
 
 Per compilare o aggiornare una singola dispensa:
 
 ```bash
-typst compile --root . --pdf-standard ua-1 src/1-diagrammi-di-flusso/1-1-teoria-diagrammi-di-flusso.typ dist/1-1-teoria-diagrammi-di-flusso.pdf
-typst compile --root . src/1-diagrammi-di-flusso/1-2-esercizi.typ dist/1-2-esercizi.pdf
-typst compile --root . src/2-flowgorithm/2-1-teoria-flowgorithm.typ dist/2-1-teoria-flowgorithm.pdf
-typst watch --root . src/2-flowgorithm/2-1-teoria-flowgorithm.typ dist/2-1-teoria-flowgorithm.pdf
+typst compile --root . --pdf-standard ua-1 src/1-programmi-e-algoritmi/1-1-teoria-programmi-e-algoritmi.typ dist/1-1-teoria-programmi-e-algoritmi.pdf
+typst compile --root . --pdf-standard ua-1 src/2-diagrammi-di-flusso/2-1-teoria-diagrammi-di-flusso.typ dist/2-1-teoria-diagrammi-di-flusso.pdf
+typst compile --root . src/2-diagrammi-di-flusso/2-2-esercizi.typ dist/2-2-esercizi.pdf
+typst compile --root . src/3-flowgorithm/3-1-teoria-flowgorithm.typ dist/3-1-teoria-flowgorithm.pdf
+typst watch --root . src/3-flowgorithm/3-1-teoria-flowgorithm.typ dist/3-1-teoria-flowgorithm.pdf
 ```
 
 Lo script elimina gli output precedenti prima della compilazione e termina al primo errore. `dist/` e `tmp/` sono esclusi da Git.
@@ -67,12 +71,12 @@ Avvia dalla radice del repository:
 bash scripts/watch.sh
 ```
 
-Finché il comando resta attivo, ogni salvataggio di `src/2-flowgorithm/2-1-teoria-flowgorithm.typ` rigenera `dist/2-1-teoria-flowgorithm.pdf`. Anche le modifiche agli stili e alle immagini utilizzati aggiornano il PDF. Per interrompere, premi `Ctrl+C`; riavvia il comando nella sessione di lavoro successiva.
+Finché il comando resta attivo, ogni salvataggio di `src/3-flowgorithm/3-1-teoria-flowgorithm.typ` rigenera `dist/3-1-teoria-flowgorithm.pdf`. Anche le modifiche agli stili e alle immagini utilizzati aggiornano il PDF. Per interrompere, premi `Ctrl+C`; riavvia il comando nella sessione di lavoro successiva.
 
 Per seguire un'altra dispensa, passa il suo percorso:
 
 ```bash
-bash scripts/watch.sh src/1-diagrammi-di-flusso/1-1-teoria-diagrammi-di-flusso.typ
+bash scripts/watch.sh src/2-diagrammi-di-flusso/2-1-teoria-diagrammi-di-flusso.typ
 ```
 
 ## Modificare le dispense
@@ -85,7 +89,7 @@ Usare `sperimenta` per le attività pratiche che rinforzano la teoria: produce u
 
 Le immagini usano percorsi dalla radice Typst, per esempio `/assets/immagini/teoria-diagrammi-flusso/blocco-selezione.jpg`. Compilare sempre con `--root .` dalla radice del repository. Dopo una modifica, compilare e controllare visivamente i PDF, in particolare tabelle e diagrammi.
 
-Le due dispense di teoria usano la numerazione automatica dei titoli. La teoria di Flowgorithm contiene le attività di laboratorio del capitolo 5, «Mettiamo in pratica». Il precedente capitolo 6 è stato eliminato. Dopo il capitolo 5 inserire una pagina con «Esercizi» grande e centrato, senza testatina o piè di pagina. La sezione degli esercizi riparte da 1 tramite azzeramento del contatore dei titoli: interessi, museo e bar sono i capitoli 1, 2 e 3 degli esercizi. Il capitolo 1 degli esercizi propone tre esercizi progressivi sull’interesse semplice: tempo in anni; tempo in giorni con scelta dell’anno commerciale, civile ordinario o civile bisestile; calcolatore dell’interesse con scelta tra anni, mesi e giorni. Raccogliere tutta la teoria necessaria all’inizio del capitolo 1 degli esercizi, con titoletti non numerati e tabelle di simboli e formule dirette; i tipi di anno compaiono solo nella tabella delle formule, senza una sezione di confronto separata. Le sezioni 1.1, 1.2 e 1.3 sono riservate ai tre esercizi, raccolti nella stessa pagina dopo la teoria, senza riquadri né etichetta «Prova in laboratorio». Tra gli esercizi lasciare circa 1 cm di spazio fisso, senza riempire tutta la pagina. Usare consegne sintetiche con «Realizzare», un elenco «Il programma deve» e una richiesta finale di test, senza esempi svolti, dati di prova assegnati o suggerimenti operativi. Non includere ritenute fiscali o formule inverse. La durata in giorni è fornita dall’utente, senza calcolo tra date o riconoscimento automatico degli anni bisestili. Gli esercizi sui diagrammi di flusso conservano i nomi delle fasi e la numerazione locale degli esercizi. La teoria sui diagrammi di flusso mantiene indice, collegamenti, segnalibri, lingua italiana, intestazioni delle tabelle, testi alternativi delle immagini ed esportazione **PDF/UA-1**. La compilazione non sostituisce una verifica completa con lettore di schermo.
+Le tre dispense di teoria usano la numerazione automatica dei titoli. La prima contiene i capitoli «Introduzione ai programmi e al software» e «Algoritmi», separati dalla precedente dispensa unica. La teoria sui diagrammi parte da «Input, elaborazione e output» e prosegue con «I blocchi fondamentali», «Esempi svolti» e «Le decisioni e il rombo», numerati 1–4. I collegamenti interni e le etichette esistenti restano validi. Non duplicare i capitoli introduttivi nella teoria sui diagrammi. La teoria di Flowgorithm contiene le attività di laboratorio del capitolo 5, «Mettiamo in pratica». Il precedente capitolo 6 è stato eliminato. Dopo il capitolo 5 inserire una pagina con «Esercizi» grande e centrato, senza testatina o piè di pagina. La sezione degli esercizi riparte da 1 tramite azzeramento del contatore dei titoli: interessi, museo e bar sono i capitoli 1, 2 e 3 degli esercizi. Il capitolo 1 degli esercizi propone tre esercizi progressivi sull’interesse semplice: tempo in anni; tempo in giorni con scelta dell’anno commerciale, civile ordinario o civile bisestile; calcolatore dell’interesse con scelta tra anni, mesi e giorni. Raccogliere tutta la teoria necessaria all’inizio del capitolo 1 degli esercizi, con titoletti non numerati e tabelle di simboli e formule dirette; i tipi di anno compaiono solo nella tabella delle formule, senza una sezione di confronto separata. Le sezioni 1.1, 1.2 e 1.3 sono riservate ai tre esercizi, raccolti nella stessa pagina dopo la teoria, senza riquadri né etichetta «Prova in laboratorio». Tra gli esercizi lasciare circa 1 cm di spazio fisso, senza riempire tutta la pagina. Usare consegne sintetiche con «Realizzare», un elenco «Il programma deve» e una richiesta finale di test, senza esempi svolti, dati di prova assegnati o suggerimenti operativi. Non includere ritenute fiscali o formule inverse. La durata in giorni è fornita dall’utente, senza calcolo tra date o riconoscimento automatico degli anni bisestili. Gli esercizi sui diagrammi di flusso conservano i nomi delle fasi e la numerazione locale degli esercizi. Le teorie su programmi e algoritmi e sui diagrammi di flusso mantengono indice, collegamenti, segnalibri, lingua italiana, intestazioni delle tabelle, testi alternativi delle immagini ed esportazione **PDF/UA-1**. La compilazione non sostituisce una verifica completa con lettore di schermo.
 
 Il capitolo 2 degli esercizi è ambientato al Museo Baracca di Lugo, con una storia introduttiva e tariffe ipotetiche: intero 10 €, ridotto 7 €, over 65 5 €. Lo sconto del 10% si applica ai soli biglietti quando il numero totale è esattamente 5; la visita guidata costa 50 € complessivi, aggiunti dopo lo sconto. Le sezioni 2.1–2.3 propongono acquisto semplice, sconto gruppo e visita guidata, con lo stesso stile sintetico del capitolo 1 degli esercizi. Raccogliere i tre esercizi in una pagina e lasciare circa 1 cm tra loro, senza distribuire lo spazio su tutta la pagina; mantenere il contesto nella pagina precedente.
 
@@ -99,10 +103,11 @@ Il workflow usa lo stesso `scripts/build.sh` della compilazione locale. Dopo un�
 
 | Artifact | PDF contenuto |
 | --- | --- |
-| `1-1-teoria-diagrammi-di-flusso` | `1-1-teoria-diagrammi-di-flusso.pdf` |
-| `1-2-esercizi` | `1-2-esercizi.pdf` |
-| `2-1-teoria-flowgorithm` | `2-1-teoria-flowgorithm.pdf` |
-| `2-2-esercizi` | `2-2-esercizi.pdf`, quando disponibile |
+| `1-1-teoria-programmi-e-algoritmi` | `1-1-teoria-programmi-e-algoritmi.pdf` |
+| `2-1-teoria-diagrammi-di-flusso` | `2-1-teoria-diagrammi-di-flusso.pdf` |
+| `2-2-esercizi` | `2-2-esercizi.pdf` |
+| `3-1-teoria-flowgorithm` | `3-1-teoria-flowgorithm.pdf` |
+| `3-2-esercizi` | `3-2-esercizi.pdf`, quando disponibile |
 
 Gli artifact sono conservati per 90 giorni, salvo limiti del repository. I PDF non vengono aggiunti automaticamente ai commit.
 
@@ -112,8 +117,9 @@ Il workflow `.github/workflows/genera-pdf.yml`, dopo una compilazione riuscita s
 
 Per la prima pubblicazione, impostare **Settings → Pages → Build and deployment → Source → GitHub Actions** nel repository GitHub. Eseguire quindi il workflow su `main`, manualmente oppure con un push il cui ultimo commit contiene `[pdf]`. I link diventano disponibili dopo la prima pubblicazione riuscita e restano invariati agli aggiornamenti successivi:
 
-- Flowgorithm: `https://federico-mazzini.github.io/dispense-flowgorithm/2-1-teoria-flowgorithm.pdf`.
-- Diagrammi di flusso: `https://federico-mazzini.github.io/dispense-flowgorithm/1-1-teoria-diagrammi-di-flusso.pdf`.
+- Programmi e algoritmi: `https://federico-mazzini.github.io/dispense-flowgorithm/1-1-teoria-programmi-e-algoritmi.pdf`.
+- Flowgorithm: `https://federico-mazzini.github.io/dispense-flowgorithm/3-1-teoria-flowgorithm.pdf`.
+- Diagrammi di flusso: `https://federico-mazzini.github.io/dispense-flowgorithm/2-1-teoria-diagrammi-di-flusso.pdf`.
 
 Anche gli altri PDF prodotti dalla build sono pubblicati con il loro nome in `dist/`. Gli artifact di Actions restano disponibili per il download indipendentemente da Pages. Se la compilazione o la pubblicazione fallisce, i link continuano a servire l’ultima versione pubblicata con successo.
 

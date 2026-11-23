@@ -10,7 +10,7 @@ import time
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "sorgente", nargs="?", default="src/2-flowgorithm/2-1-teoria-flowgorithm.typ"
+        "sorgente", nargs="?", default="src/3-flowgorithm/3-1-teoria-flowgorithm.typ"
     )
     sorgente = Path(parser.parse_args().sorgente)
     if not sorgente.is_file() or sorgente.suffix != ".typ":
@@ -19,7 +19,7 @@ def main():
     Path("dist").mkdir(exist_ok=True)
     pdf = Path("dist") / sorgente.with_suffix(".pdf").name
     comando = ["typst", "compile", "--root", "."]
-    if sorgente.stem == "1-1-teoria-diagrammi-di-flusso":
+    if sorgente.stem in {"1-1-teoria-programmi-e-algoritmi", "2-1-teoria-diagrammi-di-flusso"}:
         comando.extend(["--pdf-standard", "ua-1"])
     comando.extend([str(sorgente), str(pdf)])
 

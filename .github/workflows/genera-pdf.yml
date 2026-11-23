@@ -24,33 +24,40 @@ jobs:
           typst-version: '0.15.1'
       - name: Compila le dispense
         run: bash scripts/build.sh
+      - name: Pubblica il PDF di teoria su programmi e algoritmi
+        uses: actions/upload-artifact@v4
+        with:
+          name: 1-1-teoria-programmi-e-algoritmi
+          path: dist/1-1-teoria-programmi-e-algoritmi.pdf
+          if-no-files-found: error
+          retention-days: 90
       - name: Pubblica il PDF di teoria sui diagrammi di flusso
         uses: actions/upload-artifact@v4
         with:
-          name: 1-1-teoria-diagrammi-di-flusso
-          path: dist/1-1-teoria-diagrammi-di-flusso.pdf
+          name: 2-1-teoria-diagrammi-di-flusso
+          path: dist/2-1-teoria-diagrammi-di-flusso.pdf
           if-no-files-found: error
           retention-days: 90
       - name: Pubblica il PDF degli esercizi sui diagrammi di flusso
         uses: actions/upload-artifact@v4
         with:
-          name: 1-2-esercizi
-          path: dist/1-2-esercizi.pdf
+          name: 2-2-esercizi
+          path: dist/2-2-esercizi.pdf
           if-no-files-found: error
           retention-days: 90
       - name: Pubblica il PDF di teoria di Flowgorithm
         uses: actions/upload-artifact@v4
         with:
-          name: 2-1-teoria-flowgorithm
-          path: dist/2-1-teoria-flowgorithm.pdf
+          name: 3-1-teoria-flowgorithm
+          path: dist/3-1-teoria-flowgorithm.pdf
           if-no-files-found: error
           retention-days: 90
       - name: Pubblica il PDF degli esercizi di Flowgorithm
-        if: hashFiles('dist/2-2-esercizi.pdf') != ''
+        if: hashFiles('dist/3-2-esercizi.pdf') != ''
         uses: actions/upload-artifact@v4
         with:
-          name: 2-2-esercizi
-          path: dist/2-2-esercizi.pdf
+          name: 3-2-esercizi
+          path: dist/3-2-esercizi.pdf
           if-no-files-found: error
           retention-days: 90
       - name: Prepara i PDF per GitHub Pages
